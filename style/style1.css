@@ -7,11 +7,12 @@
 body {
   font-family: "Libre Baskerville", serif;
   font-size: 1rem;
+  background-color: #f9f6f6;
 }
 
-header {
+/* header {
   font-family: "Libre Baskerville", serif;
-}
+} */
 
 img {
   max-width: 100%;
@@ -26,12 +27,34 @@ a {
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 65%;
+  width: 60%;
 }
 
 .row {
   display: flex;
   justify-content: space-between;
+}
+
+.section-title {
+  /* font-family Inter bold */
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.section-description {
+  font-size: 0.75rem;
+  color: #636363;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.seection-text {
+  color: #636363;
+}
+
+header {
+  background-color: #fff;
 }
 
 .top-nav {
@@ -65,7 +88,7 @@ a {
 .banner {
   padding: 4rem 0;
   min-height: 500px;
-  background-image: url(../images/banner1.png);
+  background-image: url(../assets/images/banner1.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -105,8 +128,7 @@ a {
 .services {
   margin-left: auto;
   margin-right: auto;
-  padding: 5rem 13.75rem;
-  background-color: #f9f6f6;
+  padding: 5rem 12.5rem;
 }
 
 .services .services-col {
@@ -126,7 +148,6 @@ a {
 }
 
 .services p {
-  color: #636363;
   font-size: 0.65rem;
   margin-top: 0.5rem;
 }
@@ -138,4 +159,40 @@ a {
 
 .services div {
   margin-left: 1rem;
+}
+
+.top-destinations_pics {
+  padding-bottom: 5.5rem;
+}
+.top-destinations {
+  background-image: url(../assets/images/travel.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 65%;
+}
+
+.destination + .destination {
+  margin-left: 1rem;
+}
+
+.destination {
+  position: relative;
+  display: inline-block;
+}
+
+.destination span {
+  color: white;
+  font-size: 1.25rem;
+  /* font-family: Inter; */
+  position: absolute;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+.destination span:before {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  content: "";
 }
