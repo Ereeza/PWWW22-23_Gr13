@@ -20,8 +20,12 @@ img {
 
 a {
   font-family: "Libre Baskerville", serif;
-  color: black;
+  color: rgb(21, 21, 21);
   text-decoration: none;
+}
+
+#contact, #my-data{
+  color: rgb(86, 85, 85);
 }
 
 .container {
@@ -58,9 +62,13 @@ header {
 }
 
 .top-nav {
-  border-bottom: 1px rgb(156, 155, 155) solid;
+  border-bottom: 1px #c3c3c3 solid;
   padding: 1rem 0;
-  font-size: 0.75rem;
+  font-size: 0.59rem;
+}
+
+#home{
+  color: rgb(0, 138, 203);
 }
 
 .top a + a {
@@ -68,13 +76,13 @@ header {
 }
 
 .main-nav {
-  padding: 1rem 0;
-  font-size: 0.85rem;
+  padding: 1.4rem 0;
+  font-size: 0.7rem;
 }
 
 .logo {
-  width: 140px;
-  height: 17.7px;
+  width: 120px;
+  height: 15px;
 }
 
 .nav-list {
@@ -82,7 +90,7 @@ header {
 }
 
 .nav-list li + li {
-  padding-left: 1.5rem;
+  padding-left: 2rem;
 }
 
 .banner {
@@ -101,24 +109,29 @@ header {
 }
 
 .banner-text {
-  padding-top: 2rem;
+  padding-top: 5rem;
+  padding-left: 1.1rem;
   color: #fff;
   width: 50%;
 }
 
 .banner-text_mainHeader {
   text-transform: uppercase;
+  font-family: 'Inter';
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 2.67rem;
   margin-bottom: 0.5rem;
+  line-break: strict;
 }
 
 .for-life {
-  font-size: 3.3rem;
+  font-size: 3.67rem;
 }
 
 .banner-text_paragraph {
-  font-size: 1.8rem;
+  padding-top: 0.6rem;
+  font-family: 'Libre Baskerville';
+  font-size: 1.7rem;
 }
 
 .banner-form {
@@ -195,4 +208,36 @@ header {
   vertical-align: middle;
   height: 100%;
   content: "";
+}
+.discount {
+  background-image: url(../assets/images/discount.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 6rem;
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-weight: normal;
+  color: #fff;
+  margin-bottom: 5rem;
+}
+
+.discount h2 {
+  margin-bottom: 2rem; 
+  font-weight: normal;
+}
+
+.discount_bold {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.discount p {
+  margin-bottom: 5rem;
+}
+
+.join-us {
+  color: #fff;
+  text-transform: capitalize;
+  padding: 0.8rem 1.5rem;
+  background-color: black;
 }
