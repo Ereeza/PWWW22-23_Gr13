@@ -40,7 +40,8 @@ a {
 }
 
 .section-title {
-  /* font-family Inter bold */
+  font-family: 'Inter', serif;
+  font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 0.5rem;
@@ -50,7 +51,7 @@ a {
   font-size: 0.75rem;
   color: #636363;
   text-align: center;
-  margin-bottom: 1.2rem;
+  margin-bottom: 2.5rem;
 }
 
 .seection-text {
@@ -109,7 +110,7 @@ header {
 }
 
 .banner-text {
-  padding-top: 5rem;
+  padding-top: 6rem;
   padding-left: 1.1rem;
   color: #fff;
   width: 50%;
@@ -117,11 +118,11 @@ header {
 
 .banner-text_mainHeader {
   text-transform: uppercase;
-  font-family: 'Inter';
+  font-family: 'Inter', serif;
   font-weight: bold;
   font-size: 2.67rem;
   margin-bottom: 0.5rem;
-  line-break: strict;
+  line-height: 3rem;
 }
 
 .for-life {
@@ -130,7 +131,7 @@ header {
 
 .banner-text_paragraph {
   padding-top: 0.6rem;
-  font-family: 'Libre Baskerville';
+  font-family: 'Libre Baskerville', serif;
   font-size: 1.7rem;
 }
 
@@ -161,8 +162,13 @@ header {
 }
 
 .services p {
+  font-family: 'Libre Baskerville', serif;
   font-size: 0.65rem;
   margin-top: 0.5rem;
+}
+
+.services h3{
+  font-family: 'Inter', serif;
 }
 
 .services img {
@@ -177,11 +183,12 @@ header {
 .top-destinations_pics {
   padding-bottom: 5.5rem;
 }
+
 .top-destinations {
   background-image: url(../assets/images/travel.png);
   background-repeat: no-repeat;
   background-position: left bottom;
-  background-size: 65%;
+  background-size: 67%;
 }
 
 .destination + .destination {
@@ -195,8 +202,9 @@ header {
 
 .destination span {
   color: white;
+  font-family: 'Inter', serif;
+  font-weight: bold;
   font-size: 1.25rem;
-  /* font-family: Inter; */
   position: absolute;
   text-align: center;
   height: 100%;
@@ -240,4 +248,48 @@ header {
   text-transform: capitalize;
   padding: 0.8rem 1.5rem;
   background-color: black;
+}
+
+.package {
+  background-color: #fff;
+}
+
+.package + .package {
+  margin-left: 1rem;
+}
+
+.package h3{
+  padding: 1rem ;
+  font-family: 'Inter', serif;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.package p{
+  padding: 0 1rem 1rem 1rem;
+  font-family: 'Libre Baskerville' ,serif;
+  font-weight: normal;
+  font-size: 0.65rem;
+  color: #767676;
+}
+
+.book-now {
+  margin: 1rem;
+  color: #fff;
+  font-size: 0.6rem;
+  text-transform: capitalize;
+  padding: 0.8rem 1.2rem;
+  background-color: #008ACB;
+}
+
+.price{
+  margin: 1rem;
+  padding: 0rem 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #008ACB;
+}
+
+.book-now:hover{
+  background-color: #00408C;
 }
