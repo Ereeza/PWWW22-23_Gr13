@@ -24,7 +24,8 @@ a {
   text-decoration: none;
 }
 
-#contact, #my-data{
+#contact,
+#my-data {
   color: rgb(86, 85, 85);
 }
 
@@ -40,7 +41,7 @@ a {
 }
 
 .section-title {
-  font-family: 'Inter', serif;
+  font-family: "Inter", serif;
   font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
@@ -68,7 +69,7 @@ header {
   font-size: 0.59rem;
 }
 
-#home{
+#home {
   color: rgb(0, 138, 203);
 }
 
@@ -118,7 +119,7 @@ header {
 
 .banner-text_mainHeader {
   text-transform: uppercase;
-  font-family: 'Inter', serif;
+  font-family: "Inter", serif;
   font-weight: bold;
   font-size: 2.67rem;
   margin-bottom: 0.5rem;
@@ -131,7 +132,7 @@ header {
 
 .banner-text_paragraph {
   padding-top: 0.6rem;
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   font-size: 1.7rem;
 }
 
@@ -162,13 +163,13 @@ header {
 }
 
 .services p {
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Libre Baskerville", serif;
   font-size: 0.65rem;
   margin-top: 0.5rem;
 }
 
-.services h3{
-  font-family: 'Inter', serif;
+.services h3 {
+  font-family: "Inter", serif;
 }
 
 .services img {
@@ -180,7 +181,8 @@ header {
   margin-left: 1rem;
 }
 
-.top-destinations_pics {
+.top-destinations_pics,
+.featured-packages {
   padding-bottom: 5.5rem;
 }
 
@@ -202,7 +204,7 @@ header {
 
 .destination span {
   color: white;
-  font-family: 'Inter', serif;
+  font-family: "Inter", serif;
   font-weight: bold;
   font-size: 1.25rem;
   position: absolute;
@@ -217,6 +219,14 @@ header {
   height: 100%;
   content: "";
 }
+
+.destination span:before {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  content: "";
+}
+
 .discount {
   background-image: url(../assets/images/discount.png);
   background-size: cover;
@@ -230,7 +240,7 @@ header {
 }
 
 .discount h2 {
-  margin-bottom: 2rem; 
+  margin-bottom: 2rem;
   font-weight: normal;
 }
 
@@ -258,16 +268,16 @@ header {
   margin-left: 1rem;
 }
 
-.package h3{
-  padding: 1rem ;
-  font-family: 'Inter', serif;
+.package h3 {
+  padding: 1rem;
+  font-family: "Inter", serif;
   font-weight: bold;
   font-size: 1rem;
 }
 
-.package p{
+.package p {
   padding: 0 1rem 1rem 1rem;
-  font-family: 'Libre Baskerville' ,serif;
+  font-family: "Libre Baskerville", serif;
   font-weight: normal;
   font-size: 0.65rem;
   color: #767676;
@@ -279,17 +289,109 @@ header {
   font-size: 0.6rem;
   text-transform: capitalize;
   padding: 0.8rem 1.2rem;
-  background-color: #008ACB;
+  background-color: #008acb;
 }
 
-.price{
+.price {
   margin: 1rem;
   padding: 0rem 1rem;
   font-weight: bold;
   font-size: 1.5rem;
-  color: #008ACB;
+  color: #008acb;
 }
 
-.book-now:hover{
-  background-color: #00408C;
+.book-now:hover {
+  background-color: #00408c;
+}
+
+footer {
+  background-color: #faf8f8;
+}
+
+.footer-container {
+  padding-top: 5rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2.5rem;
+}
+
+.footerDivs h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding-bottom: 1rem;
+}
+
+.footerDivs h4 {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #3e3e3e;
+  padding-bottom: 0.7rem;
+}
+
+.footerDivs p {
+  font-family: "Libre Baskerville", sans-serif;
+  font-weight: normal;
+  font-size: 0.6rem;
+  color: #767676;
+  padding-bottom: 1rem;
+  width: 15rem;
+}
+
+.social-networks {
+  display: flex;
+}
+
+.social-networks li {
+  list-style-type: none;
+}
+
+.social-networks li a {
+  display: inline-block;
+  width: 2rem;
+}
+
+.social-networks li a img {
+  width: 1rem;
+}
+
+.footerDivs li {
+  list-style-type: none;
+  font-family: "Libre Baskerville", sans-serif;
+  font-weight: normal;
+  font-size: 0.7rem;
+  color: #767676;
+  padding-bottom: 0.5rem;
+}
+
+.bottom-details {
+  background-color: #ebeef3;
+}
+
+.bottom-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .bottom-container .bottom-text span {
+  font-family: "Libre Baskerville", sans-serif;
+  font-weight: normal;
+  font-size: 0.7rem;
+  color: #919090;
+}
+
+.bottom-text span a:link,
+.bottom-text span a:visited {
+  color: #4e4e4e;
+}
+
+footer .bottom-container .bottom-cards img {
+  width: 1.7rem;
 }
