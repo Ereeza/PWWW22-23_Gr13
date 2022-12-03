@@ -131,17 +131,31 @@
         </div>
       </section>
       <section class="discount">
-        <h2>
-          <span class="discount_bold">Get upto 50% discount</span> <br />
-          by joining us within 11 march
-        </h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-          ratione eos, libero veritatis eveniet commodi mollitia doloremque
-          consequuntur molestias unde deserunt ipsum facere illum? Debitis dolor
-          illo iure perferendis ad!
-        </p>
-        <a href="#" class="join-us">join us</a>
+        <div class="container">
+          <h2>
+            <span class="discount_bold">Get upto 50% discount</span> <br />
+            by joining us within 11 march
+          </h2>
+          <div class="countdown-container">
+            <div class="days-container">
+              <div class="days"></div>
+              <div class="days-label">days</div>
+            </div>
+            <div class="hours-container">
+              <div class="hours"></div>
+              <div class="hours-label">hours</div>
+            </div>
+            <div class="minutes-container">
+              <div class="minutes"></div>
+              <div class="minutes-label">minutes</div>
+            </div>
+            <div class="seconds-container">
+              <div class="seconds"></div>
+              <div class="seconds-label">seconds</div>
+            </div>
+          </div>
+          <a href="#" class="join-us">join us</a>
+        </div>
       </section>
       <section class="featured-packages">
         <div class="container">
@@ -312,5 +326,80 @@
         </div>
       </div>
     </footer>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzWwevbSIjV5nhs0y3Dul2PMQSy2hdhDWJ_1J1NTLttMA4qBKw0dIZSrFMPjvfjlpHnFg/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const message = document.getElementById("message")
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            message.innerHTML = "Thank You For Subscribing!"
+            setTimeout(function(){
+              message.innerHTML = ""
+            },2000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+  
+      const countDownClock = (number = 100, format = 'seconds') => {
+    
+    const d = document;
+    const daysElement = d.querySelector('.days');
+    const hoursElement = d.querySelector('.hours');
+    const minutesElement = d.querySelector('.minutes');
+    const secondsElement = d.querySelector('.seconds');
+    let countdown;
+    convertFormat(format);
+    
+    
+    function convertFormat(format) {
+      switch(format) {
+        case 'seconds':
+          return timer(number);
+        case 'minutes':
+          return timer(number * 60);
+          case 'hours':
+          return timer(number * 60 * 60);
+        case 'days':
+          return timer(number * 60 * 60 * 24);             
+      }
+    }
+  
+    function timer(seconds) {
+      const now = Date.now();
+      const then = now + seconds * 1000;
+  
+      countdown = setInterval(() => {
+        const secondsLeft = Math.round((then - Date.now()) / 1000);
+  
+        if(secondsLeft <= 0) {
+          clearInterval(countdown);
+          return;
+        };
+  
+        displayTimeLeft(secondsLeft);
+  
+      },000);
+    }
+  
+    function displayTimeLeft(seconds) {
+      daysElement.textContent = Math.floor(seconds / 86400);
+      hoursElement.textContent = Math.floor((seconds % 86400) / 3600);
+      minutesElement.textContent = Math.floor((seconds % 86400) % 3600 / 60);
+      secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
+    }
+  }
+  
+  
+  /*
+    start countdown
+    enter number and format
+    days, hours, minutes or seconds
+  */
+  countDownClock(83, 'days');
+    </script>
   </body>
 </html>
