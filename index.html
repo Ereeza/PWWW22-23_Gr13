@@ -5,13 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/style1.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap"
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
     <title>Travel Dream</title>
   </head>
@@ -175,7 +181,7 @@
                   </p>
                 </div>
                 <div class="package-booking row">
-                  <a href="#" class="book-now">Book Now</a>
+                  <a href="#" class="book-now_btn">Book Now</a>
                   <span class="price">&dollar; 120</span>
                 </div>
               </div>
@@ -191,7 +197,7 @@
                   </p>
                 </div>
                 <div class="package-booking row">
-                  <a href="#" class="book-now">Book Now</a>
+                  <a href="#" class="book-now_btn">Book Now</a>
                   <span class="price">&dollar; 120</span>
                 </div>
               </div>
@@ -207,7 +213,7 @@
                   </p>
                 </div>
                 <div class="package-booking row">
-                  <a href="#" class="book-now">Book Now</a>
+                  <a href="#" class="book-now_btn">Book Now</a>
                   <span class="price">&dollar; 120</span>
                 </div>
               </div>
@@ -215,6 +221,64 @@
           </div>
         </div>
       </section>
+      <section class="special-offer">
+        <div class="special-offer_left">
+          <div class="special-offer_left_text">
+            <p class="special-offer_p1">Have Your</p>
+            <p class="special-offer_p2">Lifetime</p>
+            <p class="special-offer_p3">Experience</p>
+          </div>
+        </div>
+        <div class="special-offer_right">
+          <div class="special-offer_right_content">
+            <h4 class="special-offer_right_title">Special Offer</h4>
+            <h3 class="percentage40">40%</h3>
+            <span class="off">OFF</span>
+
+            <h4 class="thailand">Thailand</h4>
+            <div class="special-offer_right_text row">
+              <ul>
+                <li><i class="fa-solid fa-arrow-right"></i>5 Days 6 Nights</li>
+                <li><i class="fa-solid fa-arrow-right"></i>2 Person</li>
+                <li>
+                  <i class="fa-solid fa-arrow-right"></i>5 Star Accomodation
+                </li>
+              </ul>
+              <ul>
+                <li><i class="fa-solid fa-arrow-right"></i>Transportation</li>
+                <li><i class="fa-solid fa-arrow-right"></i>Food Facilities</li>
+              </ul>
+            </div>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi,
+              quo. Debitis iusto perferendis ipsum dolores dolor velit itaque
+            </p>
+            <div class="offer-price row">
+              <div>
+                <p class="offer-currentPrice">$900</p>
+                <span class="offer-lastPrice">$1500</span>
+              </div>
+              <div class="reviews-row">
+                <img src="assets/images/stars.png" alt="" />
+                <span class="offer-reviews">(38 Review)</span>
+              </div>
+            </div>
+            <div class="offer-buttons">
+              <a class="book-now_btn">Book Now</a>
+              <a class="read-more_btn" id="readMoreBtn">Read More</a>
+            </div>
+            <!-- <div id="readMore">
+              <div class="read-more_bar">
+                <h4>Read More - Thailand</h4>
+                <span class="read-more_close" id="readMoreClose">X</span>
+              </div>
+              <hr />
+              <div class="read-more_content"></div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+
       <section class="newsletter">
         <div class="container">
           <div class="row subscribe-newsletter">
@@ -326,80 +390,80 @@
         </div>
       </div>
     </footer>
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbzWwevbSIjV5nhs0y3Dul2PMQSy2hdhDWJ_1J1NTLttMA4qBKw0dIZSrFMPjvfjlpHnFg/exec'
-      const form = document.forms['submit-to-google-sheet']
-      const message = document.getElementById("message")
-    
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {
-            message.innerHTML = "Thank You For Subscribing!"
-            setTimeout(function(){
-              message.innerHTML = ""
-            },2000)
-            form.reset()
+    <!-- <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbzWwevbSIjV5nhs0y3Dul2PMQSy2hdhDWJ_1J1NTLttMA4qBKw0dIZSrFMPjvfjlpHnFg/exec";
+      const form = document.forms["submit-to-google-sheet"];
+      const message = document.getElementById("message");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            message.innerHTML = "Thank You For Subscribing!";
+            setTimeout(function () {
+              message.innerHTML = "";
+            }, 2000);
+            form.reset();
           })
-          .catch(error => console.error('Error!', error.message))
-      })
-  
-      const countDownClock = (number = 100, format = 'seconds') => {
-    
-    const d = document;
-    const daysElement = d.querySelector('.days');
-    const hoursElement = d.querySelector('.hours');
-    const minutesElement = d.querySelector('.minutes');
-    const secondsElement = d.querySelector('.seconds');
-    let countdown;
-    convertFormat(format);
-    
-    
-    function convertFormat(format) {
-      switch(format) {
-        case 'seconds':
-          return timer(number);
-        case 'minutes':
-          return timer(number * 60);
-          case 'hours':
-          return timer(number * 60 * 60);
-        case 'days':
-          return timer(number * 60 * 60 * 24);             
-      }
-    }
-  
-    function timer(seconds) {
-      const now = Date.now();
-      const then = now + seconds * 1000;
-  
-      countdown = setInterval(() => {
-        const secondsLeft = Math.round((then - Date.now()) / 1000);
-  
-        if(secondsLeft <= 0) {
-          clearInterval(countdown);
-          return;
-        };
-  
-        displayTimeLeft(secondsLeft);
-  
-      },000);
-    }
-  
-    function displayTimeLeft(seconds) {
-      daysElement.textContent = Math.floor(seconds / 86400);
-      hoursElement.textContent = Math.floor((seconds % 86400) / 3600);
-      minutesElement.textContent = Math.floor((seconds % 86400) % 3600 / 60);
-      secondsElement.textContent = seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
-    }
-  }
-  
-  
-  /*
+          .catch((error) => console.error("Error!", error.message));
+      });
+
+      const countDownClock = (number = 100, format = "seconds") => {
+        const d = document;
+        const daysElement = d.querySelector(".days");
+        const hoursElement = d.querySelector(".hours");
+        const minutesElement = d.querySelector(".minutes");
+        const secondsElement = d.querySelector(".seconds");
+        let countdown;
+        convertFormat(format);
+
+        function convertFormat(format) {
+          switch (format) {
+            case "seconds":
+              return timer(number);
+            case "minutes":
+              return timer(number * 60);
+            case "hours":
+              return timer(number * 60 * 60);
+            case "days":
+              return timer(number * 60 * 60 * 24);
+          }
+        }
+
+        function timer(seconds) {
+          const now = Date.now();
+          const then = now + seconds * 1000;
+
+          countdown = setInterval(() => {
+            const secondsLeft = Math.round((then - Date.now()) / 1000);
+
+            if (secondsLeft <= 0) {
+              clearInterval(countdown);
+              return;
+            }
+
+            displayTimeLeft(secondsLeft);
+          }, 000);
+        }
+
+        function displayTimeLeft(seconds) {
+          daysElement.textContent = Math.floor(seconds / 86400);
+          hoursElement.textContent = Math.floor((seconds % 86400) / 3600);
+          minutesElement.textContent = Math.floor(
+            ((seconds % 86400) % 3600) / 60
+          );
+          secondsElement.textContent =
+            seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60;
+        }
+      };
+
+      /*
     start countdown
     enter number and format
     days, hours, minutes or seconds
   */
-  countDownClock(83, 'days');
-    </script>
+      countDownClock(83, "days");
+    </script> -->
   </body>
 </html>
