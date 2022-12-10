@@ -182,7 +182,7 @@ header {
 }
 
 .top-destinations_pics,
-.featured-packages {
+.featured-packages, .clients-reviews , .latest-blogs {
   padding-bottom: 5.5rem;
 }
 
@@ -242,7 +242,7 @@ header {
 
 .discount h2 {
   margin-top: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1rem; 
   font-weight: normal;
   padding-bottom: 2rem;
   font-size: 1.6rem;
@@ -266,7 +266,7 @@ header {
 
 .days-container,
 .hours-container,
-.minutes-container,
+.minutes-container, 
 .seconds-container {
   display: flex;
   flex-direction: column;
@@ -295,7 +295,7 @@ header {
 .hours,
 .minutes,
 .seconds {
-  font-size: 2.5rem;
+  font-size: 2.5rem; 
   margin: -5rem 0 -6rem;
 }
 
@@ -315,14 +315,12 @@ header {
   font-size: 0.75rem;
 }
 
-.package {
+.package{
   background-color: #fff;
-  padding: 1rem;
 }
 
-.package:hover {
-  box-shadow: 0px 3px 8px hsl(0, 0%, 80%);
-  transition: 0.2s;
+.package1:hover{
+  box-shadow: 0px 3px 8px hsl( 0, 0%, 80%);
 }
 
 .package + .package {
@@ -330,42 +328,132 @@ header {
 }
 
 .package h3 {
-  padding: 1rem 0;
+  padding: 1rem;
   font-family: "Inter", serif;
   font-weight: bold;
   font-size: 1rem;
 }
 
-.package p {
-  padding: 0 0rem 1rem 0;
+.package p, .cards p {
+  padding: 0 1rem 1rem 1rem;
   font-family: "Libre Baskerville", serif;
   font-weight: normal;
   font-size: 0.65rem;
   color: #767676;
 }
 
-.book-now_btn {
-  margin: 1rem 0;
+.book-now {
+  margin: 1rem;
   color: #fff;
   font-size: 0.6rem;
   text-transform: capitalize;
   padding: 0.8rem 1.2rem;
   background-color: #008acb;
-  cursor: pointer;
-  transition: 0.3s;
-  /* display inline block */
 }
 
 .price {
-  margin: 1rem 0;
+  margin: 1rem;
   padding: 0rem 1rem;
   font-weight: bold;
   font-size: 1.5rem;
   color: #008acb;
 }
 
-.book-now_btn:hover {
+.book-now:hover {
   background-color: #00408c;
+}
+
+.cards {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0 2rem 0;
+}
+
+.cards:hover {
+  box-shadow: 0px 3px 8px hsl( 0, 0%, 80%);
+}
+
+.cards + .cards {
+  margin-left: 1rem;
+}
+
+.quote {
+  padding: 1rem 0 1.5rem 0;
+}
+
+.cards p {
+  font-family: 'Libre Baskerville', sans-serif;
+  font-weight: normal;
+  font-size: 0.7rem;
+  color: #151515;
+  text-align: center;
+  text-indent: 0.3rem;
+  line-height: 1.3rem;
+}
+
+.client-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.client-name {
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: #767676;
+  padding: 1rem 0 0.5rem 0;
+}
+
+.client-address {
+  font-family: 'Libre Baskerville', sans-serif;
+  font-weight: normal;
+  font-size: 0.7rem;
+  color: #A1A1A1;
+}
+
+.testimonal-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 1.25rem;
+}
+
+.testimonal-buttons label {
+  height: 0.9rem;
+  width: 0.9rem;
+  background: #ACACAC;
+  margin: 0 0.255rem;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.testimonal-buttons label.active {
+  background: #008ACB;
+}
+
+.package1 .date {
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  font-family: 'Libre Baskerville', sans-serif;
+  font-weight: normal;
+  font-size: 0.5rem;
+}
+
+.package1 .blog-title {
+  font-size: 0.85rem;
+  padding: 0 0 0.5rem 1rem;
+}
+
+.read-more {
+  padding-left: 1rem;
+  padding-bottom: 2.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  font-size: 0.7rem;
+  color: #008ACB;
 }
 
 .special-offer {
@@ -538,6 +626,7 @@ header {
 .newsletter {
   background-color: #003768;
 }
+
 .subscribe {
   padding-top: 6rem;
   padding-bottom: 7rem;
@@ -627,6 +716,7 @@ footer {
   color: #767676;
   padding-bottom: 1rem;
   width: 15rem;
+  line-height: 1rem;
 }
 
 .social-networks {
