@@ -70,14 +70,83 @@
               <span class="for-life">for life. </span>
             </h1>
             <p class="banner-text_paragraph">Live your best moments</p>
-            <!-- oose header2-->
           </div>
 
-          <div class="banner-form">
-            <form action="">
-              <input type="text" />
-              <input type="text" />
-              <input type="email" />
+          <div class="banner-form__wrapper">
+            <form action="" class="banner-form">
+              <div class="banner-form_flex banner-form__destination">
+                <div class="banner-form__icon">
+                  <i class="fa-sharp fa-solid fa-location-dot"></i>
+                </div>
+                <input
+                  type="text"
+                  name="destination"
+                  id="bannerDestination"
+                  placeholder="Where are you going?"
+                />
+              </div>
+              <div class="banner-form_flex banner-form__location">
+                <div class="banner-form__icon">
+                  <i class="fa-sharp fa-solid fa-location-dot"></i>
+                </div>
+                <input
+                  type="text"
+                  name="location"
+                  id="bannerLocation"
+                  placeholder="Location"
+                />
+              </div>
+              <div class="banner-form_flex banner-form__tour-type">
+                <div class="banner-form__icon">
+                  <i class="fa-sharp fa-solid fa-clipboard-check"></i>
+                </div>
+
+                <input
+                  type="text"
+                  name="tourType"
+                  id="bannerTourType"
+                  placeholder="Tour Type"
+                />
+              </div>
+              <div class="banner-form_flex banner-form__min-price">
+                <div class="banner-form__icon">
+                  <i class="fa-sharp fa-solid fa-dollar-sign"></i>
+                </div>
+                <input
+                  type="number"
+                  name="minPrice"
+                  id="bannerMinPrice"
+                  placeholder="Min price"
+                />
+              </div>
+              <div class="banner-form_flex banner-form__max-price">
+                <div class="banner-form__icon">
+                  <i class="fa-sharp fa-solid fa-dollar-sign"></i>
+                </div>
+                <input
+                  type="number"
+                  name="maxPrice"
+                  id="BannerMaxPrice"
+                  placeholder="Max price"
+                />
+              </div>
+              <div class="banner-form_flex banner-form__language">
+                <div class="banner-form__icon">
+                  <i class="fa-solid fa-earth-asia"></i>
+                </div>
+                <input
+                  type="text"
+                  name="language"
+                  id="bannerLanguage"
+                  placeholder="Language"
+                />
+              </div>
+              <div class="banner-form_flex search">
+                <div>
+                  <img src="" alt="" />
+                </div>
+                <input type="submit" id="bannerSearch" value="Search" />
+              </div>
             </form>
           </div>
         </div>

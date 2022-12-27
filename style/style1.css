@@ -30,8 +30,7 @@ a {
 }
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   width: 60%;
 }
 
@@ -73,7 +72,7 @@ header {
   color: rgb(0, 138, 203);
 }
 
-.top a + a {
+.top a+a {
   padding-left: 1.5rem;
 }
 
@@ -91,7 +90,7 @@ header {
   list-style-type: none;
 }
 
-.nav-list li + li {
+.nav-list li+li {
   padding-left: 2rem;
 }
 
@@ -114,7 +113,7 @@ header {
   padding-top: 6rem;
   padding-left: 1.1rem;
   color: #fff;
-  width: 50%;
+  width: 100%;
 }
 
 .banner-text_mainHeader {
@@ -137,8 +136,46 @@ header {
 }
 
 .banner-form {
-  padding: 1px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 1rem;
 }
+
+.banner-form>div input {
+  width: 100%;
+}
+
+.banner-form input[type="submit"] {
+  color: white;
+  background-color: #0075bf;
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.banner-form__icon {
+  background-color: black;
+  min-width: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-form__icon i {
+  font-size: 20px;
+  color: white;
+}
+
+.banner-form>div {
+  display: flex;
+}
+
+.banner-form input {
+  padding: 0.7rem;
+}
+
 
 .services {
   margin-left: auto;
@@ -182,7 +219,9 @@ header {
 }
 
 .top-destinations_pics,
-.featured-packages, .clients-reviews , .latest-blogs {
+.featured-packages,
+.clients-reviews,
+.latest-blogs {
   padding-bottom: 5.5rem;
 }
 
@@ -193,7 +232,7 @@ header {
   background-size: 67%;
 }
 
-.destination + .destination {
+.destination+.destination {
   margin-left: 1rem;
 }
 
@@ -242,7 +281,7 @@ header {
 
 .discount h2 {
   margin-top: 2.5rem;
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
   font-weight: normal;
   padding-bottom: 2rem;
   font-size: 1.6rem;
@@ -266,7 +305,7 @@ header {
 
 .days-container,
 .hours-container,
-.minutes-container, 
+.minutes-container,
 .seconds-container {
   display: flex;
   flex-direction: column;
@@ -279,15 +318,15 @@ header {
   margin-left: 1rem;
 }
 
-.days-container + .hours-container {
+.days-container+.hours-container {
   margin-left: 2.5rem;
 }
 
-.hours-container + .minutes-container {
+.hours-container+.minutes-container {
   margin-left: 2.5rem;
 }
 
-.minutes-container + .seconds-container {
+.minutes-container+.seconds-container {
   margin-left: 2.5rem;
 }
 
@@ -295,7 +334,7 @@ header {
 .hours,
 .minutes,
 .seconds {
-  font-size: 2.5rem; 
+  font-size: 2.5rem;
   margin: -5rem 0 -6rem;
 }
 
@@ -315,15 +354,15 @@ header {
   font-size: 0.75rem;
 }
 
-.package{
+.package {
   background-color: #fff;
 }
 
-.package1:hover{
-  box-shadow: 0px 3px 8px hsl( 0, 0%, 80%);
+.package1:hover {
+  box-shadow: 0px 3px 8px hsl(0, 0%, 80%);
 }
 
-.package + .package {
+.package+.package {
   margin-left: 1rem;
 }
 
@@ -334,7 +373,8 @@ header {
   font-size: 1rem;
 }
 
-.package p, .cards p {
+.package p,
+.cards p {
   padding: 0 1rem 1rem 1rem;
   font-family: "Libre Baskerville", serif;
   font-weight: normal;
@@ -373,10 +413,10 @@ header {
 }
 
 .cards:hover {
-  box-shadow: 0px 3px 8px hsl( 0, 0%, 80%);
+  box-shadow: 0px 3px 8px hsl(0, 0%, 80%);
 }
 
-.cards + .cards {
+.cards+.cards {
   margin-left: 1rem;
 }
 
@@ -459,7 +499,8 @@ header {
 .special-offer {
   display: flex;
   color: white;
-  margin-bottom: 3rem; /*heke tani*/
+  margin-bottom: 3rem;
+  /*heke tani*/
 }
 
 .special-offer_left {
@@ -773,4 +814,30 @@ footer .bottom-container .bottom-text span {
 
 footer .bottom-container .bottom-cards img {
   width: 1.7rem;
+}
+
+@media (max-width: 1300px) {
+  .banner-form {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+
+  .banner-form {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner-form__destination {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
 }
