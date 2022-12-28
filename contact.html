@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/contact.css" />
+    <title>Contact</title>
+  </head>
+  <body>
+    <main class="contactContainer">
+      <div class="contact">
+        <h1 class="contact__title">Contact</h1>
+        <form class="contact__form" id="form">
+          <div class="contact__inputGroup">
+            <label>Email:</label>
+            <br />
+            <input type="email" placeholder="Email" id="email" />
+            <span id="emailErrorMessage" class="errors"></span>
+          </div>
+          <div class="contact__inputGroup">
+            <label>Comment:</label>
+            <br />
+            <textarea
+              placeholder="Comment"
+              id="comment"
+              cols="20"
+              rows="10"
+            ></textarea>
+            <span id="commentErrorMessage" class="errors"></span>
+          </div>
+          <span id="successfulMessage" class="successfulMessage"></span>
+          <input type="submit" />
+        </form>
+      </div>
+    </main>
+
+    <script>
+      const emailInput = document.getElementById("email");
+      const commentInput = document.getElementById("comment");
+      const emailErrorMessage = document.getElementById("emailErrorMessage");
+      const commentErrorMessage = document.getElementById(
+        "commentErrorMessage"
+      );
+      const successfulMessage = document.getElementById("successfulMessage");
+
+      document.getElementById("form").addEventListener("submit", (event) => {
+        try {
+          let errors = {
+            email: "",
+            comment: "",
+          };
+
+          event.preventDefault();
+
+          if (emailInput.value.length === 0) {
+            errors = {
+              ...errors,
+              email: "Email is required!",
+            };
+          }
+
+          if (commentInput.value.length === 0) {
+            errors = {
+              ...errors,
+              comment: "Comment is required!",
+            };
+          }
+
+          if (errors.email || errors.comment) {
+            throw errors;
+          } else {
+            successfulMessage.textContent =
+              "Thank you for contacting us! We will answer as soon as possible.";
+
+            emailErrorMessage.textContent = "";
+            commentErrorMessage.textContent = "";
+          }
+        } catch (errors) {
+          emailErrorMessage.textContent = errors.email;
+          commentErrorMessage.textContent = errors.comment;
+        }
+      });
+    </script>
+  </body>
+</html>
