@@ -41,15 +41,13 @@
       </div>
       <div class="main-nav">
         <div class="container row">
-          <img
-            class="logo"
-            src="assets/images/logo.png"
-            id="logo"
-            alt="Travel Dream"
-          />
-
-          <nav class="nav-bar">
-            <ul class="nav-list row">
+          <div class="nav-wrapper">
+            <img class="logo" src="assets/images/logo.png" id="logo" alt="Travel Dream" />
+            <input id="menu-toggle" type="checkbox" />
+            <label class="menu-button-container" for="menu-toggle">
+              <div class="menu-button"></div>
+            </label>
+            <ul class="menu">
               <li><a href="#" id="home">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Tours</a></li>
@@ -57,7 +55,7 @@
               <li><a href="#">Blog</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
-          </nav>
+          </div>
         </div>
       </div>
     </header>
