@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Libre Baskerville", serif;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+.mission, .story, .values {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-mission, .our-story, .our-values, .our-services{
+    padding: 2rem;
+}
+
+ h1 {
+    font-family: 'Caramel';
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    color: rgb(43, 118, 179);
+}
+
+.our-mission p, .our-story p, .our-values p {
+    padding: 1rem 5rem;
+    font-size: medium;
+    font-weight: normal;
+    color: darkslategray;
+    text-align: center;
+}
+
+.moto {
+    padding: 4.6rem;
+    background-color: rgb(132, 170, 190);
+}
+
+.value {
+    padding: 9.4rem;
+    background-color: rgb(132, 170, 190);
+}
+
+.our-values ul {
+    padding: 1rem 8rem;
+    font-size: medium;
+    font-weight: normal;
+    color: darkslategray;
+    text-align: left;
+    list-style-type: circle;
+}
+
+.services-row  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    color: rgb(19, 48, 48);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.sub-services {
+    padding: 1.2rem;
+}
+
+.sub-services li {
+    font-size: 0.8rem;
+    list-style-type: square;
+    color: darkslategray;
+}
+
+
+.services {
+    padding-top: 5rem;
+    width: 95%;
+    background-color: beige;
+}
+
+
+
+
+
+
+
+
+
+
