@@ -1,0 +1,353 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Libre Baskerville", serif;
+    font-size: 1rem;
+    background-color: #f9f6f6;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    font-family: "Libre Baskerville", serif;
+    color: rgb(21, 21, 21);
+    text-decoration: none;
+}
+
+#contact,
+#my-data {
+    color: rgb(86, 85, 85);
+}
+
+.container {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-title {
+    font-family: "Inter", serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+header {
+    background-color: #fff;
+}
+
+.nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    height: 50px;
+    width: 100%;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu>li {
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.menu>li:last-child {
+    margin-right: 0;
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #000;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: "";
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: "";
+    margin-top: 8px;
+}
+
+/* Hamburger menu icon animation */
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+#home {
+    color: rgb(0, 138, 203);
+}
+
+.main-nav {
+    /* padding: 1.4rem 0; */
+    font-size: 0.7rem;
+}
+
+.logo {
+    width: 120px;
+    height: 15px;
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+.nav-list li+li {
+    padding-left: 2rem;
+}
+
+.banner {
+    /* padding: 4rem 0; */
+    min-height: 500px;
+    background-image: linear-gradient(rgba(13, 13, 13, 1) 0%,
+            rgba(13, 13, 13, 0.6) 100%),
+        url(../assets/images/tours.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.banner-text {
+    padding-top: 6rem;
+    padding-left: 1.1rem;
+    color: #fff;
+    width: 100%;
+    text-align: center
+        /* rewatch */
+}
+
+.day {
+    background: url('../assets/images/banner.png') 100% 0 no-repeat fixed;
+    ;
+}
+
+.sunset {
+    background: url('../assets/images/banner.png') 100% 0 no-repeat fixed;
+}
+
+.night {
+    background: url('../assets/images/banner.jpg') 100% 0 no-repeat fixed;
+}
+
+.banner-text_mainHeader {
+    text-transform: uppercase;
+    font-family: "Inter", serif;
+    font-weight: bold;
+    font-size: 2.67rem;
+    margin-bottom: 0.5rem;
+    line-height: 3rem;
+}
+
+.banner-text_paragraph {
+    padding-top: 0.6rem;
+    font-family: "Libre Baskerville", serif;
+    font-size: 1.7rem;
+}
+
+
+section {
+    margin: 4rem 0;
+}
+
+/* 
+.most-popular {
+    margin: 4rem 0;
+} */
+
+.local-recommendations__images {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1rem;
+}
+
+.recommendation {
+    position: relative;
+    display: inline-block;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s all ease-in-out;
+}
+
+.recommendation img {
+    border-radius: 5px;
+    height: 100%;
+    object-fit: fit;
+}
+
+
+.recommendation:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.recommendation span {
+    color: white;
+    font-family: "Inter", serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    /* height: 100%;
+    width: 100%; */
+}
+
+.recommendation span:before {
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    content: "";
+}
+
+footer {
+    background-color: #faf8f8;
+}
+
+.footer-container {
+    padding-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2.5rem;
+}
+
+.footerDivs h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    padding-bottom: 1rem;
+}
+
+.footerDivs h4 {
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    color: #3e3e3e;
+    padding-bottom: 0.7rem;
+}
+
+.footerDivs p {
+    font-family: "Libre Baskerville", sans-serif;
+    font-weight: normal;
+    font-size: 0.6rem;
+    color: #767676;
+    padding-bottom: 1rem;
+    width: 15rem;
+    line-height: 1rem;
+}
+
+.social-networks {
+    display: flex;
+}
+
+.social-networks li {
+    list-style-type: none;
+}
+
+.social-networks li a {
+    display: inline-block;
+    width: 2rem;
+}
+
+.social-networks li a img {
+    width: 1rem;
+}
+
+.footerDivs li {
+    list-style-type: none;
+    font-family: "Libre Baskerville", sans-serif;
+    font-weight: normal;
+    font-size: 0.7rem;
+    color: #767676;
+    padding-bottom: 0.5rem;
+}
+
+.bottom-details {
+    background-color: #ebeef3;
+}
+
+.bottom-container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .bottom-container .bottom-text span {
+    font-family: "Libre Baskerville", sans-serif;
+    font-weight: normal;
+    font-size: 0.7rem;
+    color: #919090;
+}
+
+.bottom-text span a:link,
+.bottom-text span a:visited {
+    color: #4e4e4e;
+}
+
+footer .bottom-container .bottom-cards img {
+    width: 1.7rem;
+}
