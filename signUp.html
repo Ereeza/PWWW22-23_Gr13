@@ -1,105 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style/access.css" />
-    <title>Sign Up</title>
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Caramel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/access.css">
+    <title>Sign In</title>
+</head>
+<body>
     <main>
-      <div class="access">
-        <h1 class="access__title">Sign Up</h1>
-        <form class="access__form" id="form">
-          <div class="access__inputGroup">
-            <label>Email:</label>
-            <br />
-            <input type="email" placeholder="Email" id="email" />
-            <span id="emailErrorMessage" class="errors"></span>
-          </div>
-          <div class="access__inputGroup">
-            <label>Password:</label>
-            <br />
-            <input type="password" placeholder="Password" id="password" />
-            <span id="passwordErrorMessage" class="errors"></span>
-          </div>
-          <span id="successfulMessage" class="successfulMessage"></span>
-          <input type="submit" value="Sign Up" />
-        </form>
-      </div>
-      <a
-        class="access__linkToHomepage"
-        href="index.html"
-        style="color: #fff; margin-top: 0.5rem"
-        >Go to Homepage</a
-      >
+        <div class="discover">
+            <h2>Travel Dream</h2>
+            <h1>Discover the world&apos;s top  Destinations &amp; Tours</h1>
+        </div>
+        <div class="signIn">
+            <div class="isMember">
+                <p>Already a memeber? <a href="signIn.html">Sign in</a></p>
+            </div>
+            <div class="access">
+                <h1 class="access__title">Sign up to Travel and Dream</h1>
+                <form class="access__form" id="form">
+                    <div class="access__inputGroup">
+                        <label>Name:</label>
+                        <br />
+                        <input type="text" placeholder="Name" id="name" />
+                    </div>
+                    <div class="access__inputGroup">
+                      <label>Email:</label>
+                      <br />
+                      <input type="email" placeholder="Email" id="email" />
+                      <span id="emailErrorMessage" class="errors"></span>
+                    </div>
+                    <div class="access__inputGroup">
+                      <label>Password:</label>
+                      <br />
+                      <input type="password" placeholder="Password" id="password" />
+                      <span id="passwordErrorMessage" class="errors"></span>
+                    </div>
+                    <span id="successfulMessage" class="successfulMessage"></span>
+                    <input type="submit" value="Sign Up" />
+                  </form>
+            </div>
+            <div class="homePage">
+                <a class="access__linkToHomepage" href="index.html" style="color: rgb(15, 14, 14); margin-top: 0.5rem">
+                    Go to Homepage</a>
+            </div>
+        </div>
     </main>
-
     <script>
-      const emailInput = document.getElementById("email");
-      const passwordInput = document.getElementById("password");
-      const emailErrorMessage = document.getElementById("emailErrorMessage");
-      const passwordErrorMessage = document.getElementById(
-        "passwordErrorMessage"
-      );
-      const successfulMessage = document.getElementById("successfulMessage");
-
-      document.getElementById("form").addEventListener("submit", (event) => {
-        try {
-          let errors = {
-            email: "",
-            password: "",
-          };
-
-          //  Kur e klikon submit, stlen me bo refresh
-          event.preventDefault();
-
-          if (emailInput.value.length === 0) {
-            errors = {
-              // spread operator, kqyri qito 3 pika
-              ...errors,
-              email: "Email is required!",
+        const emailInput = document.getElementById("email");
+        const passwordInput = document.getElementById("password");
+        const emailErrorMessage = document.getElementById("emailErrorMessage");
+        const passwordErrorMessage = document.getElementById(
+          "passwordErrorMessage"
+        );
+        const successfulMessage = document.getElementById("successfulMessage");
+  
+        document.getElementById("form").addEventListener("submit", (event) => {
+          try {
+            let errors = {
+              email: "",
+              password: "",
             };
+  
+            let userEmail = localStorage.getItem("email");
+            let userPassword = localStorage.getItem("password");
+  
+            event.preventDefault();
+  
+            if (emailInput.value.length === 0) {
+              errors = {
+                ...errors,
+                email: "Email is required!",
+              };
+            }
+  
+            if (passwordInput.value.length === 0) {
+              errors = {
+                ...errors,
+                password: "Password is required!",
+              };
+            }
+  
+            if (userEmail !== emailInput.value && emailInput.value.length !== 0) {
+              errors = {
+                ...errors,
+                email: "Invalid Email! Please use the correct email address.",
+              };
+            }
+  
+            if (
+              userPassword !== passwordInput.value &&
+              passwordInput.value.length !== 0
+            ) {
+              errors = {
+                ...errors,
+                password: "Invalid Password! Please use the correct password.",
+              };
+            }
+  
+            if (errors.email || errors.password) {
+              throw errors;
+            } else {
+              successfulMessage.innerHTML =
+                "You have successfully Logged In. Go to <a href='index.html'>Homepage</a>";
+  
+              emailErrorMessage.textContent = "";
+              passwordErrorMessage.textContent = "";
+            }
+          } catch (errors) {
+            emailErrorMessage.textContent = errors.email;
+            passwordErrorMessage.textContent = errors.password;
           }
-
-          if (passwordInput.value.length === 0) {
-            errors = {
-              // spread operator, kqyri qito 3 pika
-              ...errors,
-              password: "Password is required!",
-            };
-          }
-
-          //   if ("" || "") {
-          //     console.log("llog bonu");
-          //   }
-
-          //   if ("Email is required!" || "") {
-          //     console.log("llog bonu");
-          //   }
-
-          if (errors.email || errors.password) {
-            throw errors;
-          } else {
-            successfulMessage.innerHTML =
-              "You have successfully created an account. Go to <a href='signIn.html'>Sign In</a>";
-
-            emailErrorMessage.textContent = "";
-            passwordErrorMessage.textContent = "";
-
-            localStorage.setItem("email", emailInput.value);
-            localStorage.setItem("password", passwordInput.value);
-          }
-        } catch (errors) {
-          emailErrorMessage.textContent = errors.email;
-          passwordErrorMessage.textContent = errors.password;
-        }
-      });
-    </script>
-  </body>
+        });
+      </script>
+</body>
 </html>
