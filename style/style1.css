@@ -5,8 +5,8 @@
 
   --color-text-grey: #767676;
 
-  --font-family-libre: "Libre Baskerville", serif;
-  --font-family-inter: "Inter", serif;
+  --font-family-libre: "Libre Baskerville", sans-serif;
+  --font-family-inter: "Inter", sans-serif;
 }
 
 * {
@@ -352,12 +352,13 @@ header {
   background-image: url(../assets/images/discount.png);
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 3rem 0;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
   text-align: center;
-  font-family: var(--font-family-libre);
+  font-family: "Libre Baskerville", serif;
   font-weight: normal;
   color: #fff;
-  margin-bottom: 5.5rem;
+  margin-bottom: 5rem;
 }
 
 .discount h2 {
@@ -382,6 +383,7 @@ header {
   max-width: 100%;
   justify-content: center;
   padding-bottom: 3rem;
+  gap: 1rem;
 }
 
 .days-container,
@@ -396,19 +398,6 @@ header {
   height: 6.25rem;
   border-radius: 6.19rem;
   margin-bottom: 1rem;
-  margin-left: 1rem;
-}
-
-.days-container+.hours-container {
-  margin-left: 2.5rem;
-}
-
-.hours-container+.minutes-container {
-  margin-left: 2.5rem;
-}
-
-.minutes-container+.seconds-container {
-  margin-left: 2.5rem;
 }
 
 .days,
@@ -427,7 +416,7 @@ header {
   font-size: 0.75rem;
 }
 
-.join-us {
+.join-us_btn {
   color: #fff;
   text-transform: capitalize;
   padding: 0.6rem 1.5rem;
@@ -490,7 +479,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 2rem 0 2rem 0;
+  padding: 2rem 0;
 }
 
 .cards:hover {
@@ -502,11 +491,11 @@ header {
 }
 
 .quote {
-  padding: 1rem 0 1.5rem 0;
+  padding: 1rem 0;
 }
 
 .cards p {
-  font-family: 'Libre Baskerville', sans-serif;
+  font-family: var(--font-family-libre);
   font-weight: normal;
   font-size: 0.7rem;
   color: #151515;
@@ -522,18 +511,18 @@ header {
 }
 
 .client-name {
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family-inter);
   font-weight: bold;
   font-size: 0.9rem;
   color: var(--color-text-grey);
-  padding: 1rem 0 0.5rem 0;
+  padding: 1rem 0;
 }
 
 .client-address {
-  font-family: 'Libre Baskerville', sans-serif;
+  font-family: var(--font-family-libre);
   font-weight: normal;
   font-size: 0.7rem;
-  color: #A1A1A1;
+  color: var(--color-text-grey);
 }
 
 .testimonal-buttons {
@@ -555,7 +544,7 @@ header {
   background: var(--color-lighterblue);
 }
 
-.date {
+.section-col_content .date {
   padding-top: 1rem;
   padding-bottom: 0.5rem;
   font-family: 'Libre Baskerville', sans-serif;
@@ -563,7 +552,7 @@ header {
   font-size: 0.5rem;
 }
 
-.blog-title {
+.section-col_content .blog-title {
   font-size: 0.85rem;
   padding: 0 0 0.5rem 1rem;
 }
@@ -571,7 +560,7 @@ header {
 .read-more {
   padding-left: 1rem;
   padding-bottom: 2.5rem;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-family-inter);
   font-weight: bold;
   font-size: 0.7rem;
   color: var(--color-lighterblue);
@@ -633,18 +622,18 @@ header {
   letter-spacing: 2px;
 }
 
-.percentage40 {
+.percentage-sale {
   font-size: 1.75rem;
   font-weight: normal;
   display: inline-block;
 }
 
-.off {
+#off {
   background-color: #ce6e11;
   padding: 3px;
 }
 
-.thailand {
+.special-offer_right_sub-title {
   margin: 1.5rem 0 0.6rem;
   font-size: 1.5rem;
   font-family: var(--font-family-inter);
@@ -750,12 +739,11 @@ header {
 }
 
 .subscribe {
-  padding-top: 6rem;
-  padding-bottom: 7rem;
+  padding: 7rem 0;
 }
 
 .subscribe h2 {
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: var(--font-family-libre);
   font-weight: normal;
   font-size: 1.85rem;
   color: #f7f7f2;
@@ -763,7 +751,7 @@ header {
 }
 
 .subscribe p {
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: var(--font-family-libre);
   font-size: 0.85rem;
   font-weight: normal;
   color: #f7f7f2;
@@ -782,7 +770,7 @@ header {
   outline: none;
   padding: 0.5rem 6rem 0.5rem 1rem;
   font-size: 0.8rem;
-  font-family: "Libre Baskerville";
+  font-family: var(--font-family-libre);
   color: #787878;
 }
 
@@ -795,13 +783,13 @@ header {
   padding: 1rem;
   text-transform: uppercase;
   font-size: 0.7rem;
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: var(--font-family-libre);
 }
 
 .subscribe span {
   color: #f5f5f5;
   font-size: 1rem;
-  font-family: "Libre Baskerville";
+  font-family: var(--font-family-libre);
 }
 
 footer {
@@ -810,20 +798,24 @@ footer {
 
 .footer-container {
   padding-top: 5rem;
+  padding-bottom: 2.5rem;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 2.5rem;
 }
 
-.footerDivs h3 {
-  font-family: "Inter", sans-serif;
+.footer-col a {
+  color: var(--color-text-grey);
+}
+
+.footer-col h3 {
+  font-family: var(--font-family-inter);
   font-weight: bold;
   font-size: 1.25rem;
   padding-bottom: 1rem;
 }
 
-.footerDivs h4 {
-  font-family: "Inter", sans-serif;
+.footer-col h4 {
+  font-family: var(--font-family-inter);
   font-weight: bold;
   text-transform: uppercase;
   font-size: 0.75rem;
@@ -831,8 +823,8 @@ footer {
   padding-bottom: 0.7rem;
 }
 
-.footerDivs p {
-  font-family: "Libre Baskerville", sans-serif;
+.footer-col p {
+  font-family: var(--font-family-libre);
   font-weight: normal;
   font-size: 0.6rem;
   color: var(--color-text-grey);
@@ -858,9 +850,9 @@ footer {
   width: 1rem;
 }
 
-.footerDivs li {
+.footer-col li {
   list-style-type: none;
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: var(--font-family-libre);
   font-weight: normal;
   font-size: 0.7rem;
   color: var(--color-text-grey);
@@ -872,8 +864,7 @@ footer {
 }
 
 .bottom-container {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   width: 60%;
   padding-top: 1.5rem;
   padding-bottom: 1rem;
@@ -882,7 +873,7 @@ footer {
 }
 
 footer .bottom-container .bottom-text span {
-  font-family: "Libre Baskerville", sans-serif;
+  font-family: var(--font-family-libre);
   font-weight: normal;
   font-size: 0.7rem;
   color: #919090;
@@ -897,29 +888,60 @@ footer .bottom-container .bottom-cards img {
   width: 1.7rem;
 }
 
+
+/* Responsive */
+
 @media (max-width: 1300px) {
   .banner-form {
     margin-top: 1rem;
     display: grid;
     grid-template-columns: auto auto;
   }
-}
 
-@media (max-width: 768px) {
-  .container {
-    width: 80%;
+  .services .services-col {
+    display: block;
+    text-align: center;
+    padding: 1rem 1.2rem;
   }
 
-  .banner-form {
-    display: grid;
-    grid-template-columns: auto;
+  .services .services-col h3 {
+    margin-top: 0.5rem;
   }
 }
 
-@media (min-width: 768px) {
-  .banner-form__destination {
-    grid-column-start: 1;
-    grid-column-end: 3;
+@media (max-width: 1200px) {
+  .featured-package {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section-col {
+    width: 60%;
+  }
+
+  .section-col+.section-col {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 950px) {
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .services .services-col {
+    margin: 0;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .section-col {
+    width: 72%;
   }
 }
 
@@ -964,7 +986,7 @@ footer .bottom-container .bottom-cards img {
     margin: 0;
     padding: 2rem 0;
     width: 100%;
-    background-color: var(--color-lighterblue);
+    background-color: #0075bf;
   }
 
   .menu>li a {
@@ -976,14 +998,66 @@ footer .bottom-container .bottom-cards img {
     border-bottom: 1px solid #444;
   }
 
-  #home {
-    color: #fff;
+  .banner-form {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .top-destinations_pics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .destination+.destination {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .special-offer,
+  .subscribe-newsletter {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .special-offer>div {
+    width: 100%;
+  }
+
+  .special-offer_left {
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 5rem;
+  }
+
+  .special-offer_right_content {
+    width: 100%;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-col+.footer-col {
+    margin-top: 1rem;
+  }
+
+  .footer-col h4,
+  .footer-col p,
+  .footer-col h3 {
+    text-align: center;
+  }
+
+  .footer-col ul {
+    text-align: center;
+  }
+
+  .social-networks {
+    justify-content: center;
   }
 }
-
-
-
-/*------------------- RESPONSIVE -------------- */
 
 @media (min-width: 768px) {
   .banner-form__destination {
