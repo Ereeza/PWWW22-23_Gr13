@@ -9,14 +9,55 @@ body {
 }
 
 main {
-  background-color: #003768;
-  min-height: 100vh;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+}
+
+.discover {
+  padding: 5rem 3rem 5rem 3rem;
   justify-content: center;
   align-items: center;
-  padding: 0 1.25rem;
+  background-color: #003768;
+}
+.discover h1 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #f9f6f6;
+}
+
+img {
+  padding: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  font-family: 'Caramel';
+  font-weight: 200;
+  color: #f9f6f6;
+}
+
+.signIn {
+  padding-top: 2.55rem;
+  padding-left: 14rem;
+  padding-right: 14rem;
+  padding-bottom: 5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f6f6;
+}
+
+.isMember{
+  text-align: right;
+  font-size: 0.8rem;
+  padding-bottom: 3rem;
+}
+
+.access {
+  justify-content: center;
+  align-items: center;
+  width: min(100%, 700px);
+  padding: 3.5rem 0.5rem;
 }
 
 input {
@@ -31,6 +72,10 @@ input:focus {
   outline: 1px solid #003768;
   border-radius: 4px;
 }
+
+
+
+
 
 input[type="submit"] {
   background-color: #003768;
@@ -50,18 +95,10 @@ input[type="submit"]:focus {
   outline: none;
 }
 
-.access {
-  width: min(100%, 700px);
-  background-color: #e7e7e7;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  border-radius: 10px;
-  padding: 3.5rem 0.5rem;
-}
-
 .access__title {
   text-align: center;
   margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
 .access__form {
@@ -78,9 +115,14 @@ input[type="submit"]:focus {
   margin-top: 1.25rem;
 }
 
-.access__linkToHomepage {
-  text-align: right;
+.homePage{
+  text-align: center;
   width: min(100%, 700px);
+  text-decoration: none;
+}
+
+.access__linkToHomepage {
+  font-size: 1rem;
   text-decoration: none;
 }
 
