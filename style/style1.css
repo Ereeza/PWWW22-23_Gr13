@@ -1,3 +1,14 @@
+:root {
+  --bg-color: #f9f6f6;
+  --color-darkblue: #003768;
+  --color-lighterblue: #008acb;
+
+  --color-text-grey: #767676;
+
+  --font-family-libre: "Libre Baskerville", serif;
+  --font-family-inter: "Inter", serif;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,28 +16,19 @@
 }
 
 body {
-  font-family: "Libre Baskerville", serif;
+  font-family: var(--font-family-libre);
   font-size: 1rem;
-  background-color: #f9f6f6;
+  background-color: var(--bg-color);
 }
-
-/* header {
-  font-family: "Libre Baskerville", serif;
-} */
 
 img {
   max-width: 100%;
 }
 
 a {
-  font-family: "Libre Baskerville", serif;
+  font-family: var(--font-family-libre);
   color: rgb(21, 21, 21);
   text-decoration: none;
-}
-
-#contact,
-#my-data {
-  color: rgb(86, 85, 85);
 }
 
 .container {
@@ -40,7 +42,7 @@ a {
 }
 
 .section-title {
-  font-family: "Inter", serif;
+  font-family: var(--font-family-inter);
   font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
@@ -49,18 +51,34 @@ a {
 
 .section-description {
   font-size: 0.75rem;
-  color: #636363;
+  color: var(--color-text-grey);
   text-align: center;
   margin-bottom: 2.5rem;
 }
 
 .seection-text {
-  color: #636363;
+  color: var(--color-text-grey);
 }
 
 header {
   background-color: #fff;
 }
+
+.top-nav {
+  border-bottom: 1px #c3c3c3 solid;
+  padding: 1rem 0;
+  font-size: clamp(0.45rem, 0.4471rem + 0.4496vw, 0.7rem);
+}
+
+.top-nav_left a,
+.top-nav_right a {
+  color: rgb(86, 85, 85);
+}
+
+.top-nav a+a {
+  padding-left: 1.5rem;
+}
+
 .nav-wrapper {
   display: flex;
   flex-direction: row;
@@ -70,6 +88,23 @@ header {
   height: 50px;
   width: 100%;
   position: relative;
+}
+
+.main-nav {
+  font-size: clamp(0.65rem, 0.64rem + 0.26vw, 0.8rem);
+}
+
+.logo {
+  width: 120px;
+  height: 15px;
+}
+
+.nav-list {
+  list-style-type: none;
+}
+
+.nav-list li+li {
+  padding-left: 2rem;
 }
 
 .menu {
@@ -140,36 +175,8 @@ header {
   transform: rotate(-405deg);
 }
 
-.top-nav {
-  border-bottom: 1px #c3c3c3 solid;
-  padding: 1rem 0;
-  font-size: 0.59rem;
-}
-
-#home {
-  color: rgb(0, 138, 203);
-}
-
-.top a+a {
-  padding-left: 1.5rem;
-}
-
-.main-nav {
-  padding: 1.4rem 0;
-  font-size: 0.7rem;
-}
-
-.logo {
-  width: 120px;
-  height: 15px;
-}
-
-.nav-list {
-  list-style-type: none;
-}
-
-.nav-list li+li {
-  padding-left: 2rem;
+#active {
+  color: var(--color-lighterblue);
 }
 
 .banner {
@@ -196,20 +203,20 @@ header {
 
 .banner-text_mainHeader {
   text-transform: uppercase;
-  font-family: "Inter", serif;
+  font-family: var(--font-family-inter);
   font-weight: bold;
   font-size: 2.67rem;
   margin-bottom: 0.5rem;
   line-height: 3rem;
 }
 
-.for-life {
+.banner-text_mainHeader span {
   font-size: 3.67rem;
 }
 
 .banner-text_paragraph {
   padding-top: 0.6rem;
-  font-family: "Libre Baskerville", serif;
+  font-family: var(--font-family-libre);
   font-size: 1.7rem;
 }
 
@@ -225,7 +232,7 @@ header {
 
 .banner-form input[type="submit"] {
   color: white;
-  background-color: #0075bf;
+  background-color: var(--color-lighterblue);
   font-size: 1rem;
   outline: none;
   border: none;
@@ -278,13 +285,13 @@ header {
 }
 
 .services p {
-  font-family: "Libre Baskerville", serif;
+  font-family: var(--font-family-libre);
   font-size: 0.65rem;
   margin-top: 0.5rem;
 }
 
 .services h3 {
-  font-family: "Inter", serif;
+  font-family: var(--font-family-inter);
 }
 
 .services img {
@@ -321,7 +328,7 @@ header {
 
 .destination span {
   color: white;
-  font-family: "Inter", serif;
+  font-family: var(--font-family-inter);
   font-weight: bold;
   font-size: 1.25rem;
   position: absolute;
@@ -351,7 +358,7 @@ header {
   padding-top: 3rem;
   padding-bottom: 2rem;
   text-align: center;
-  font-family: "Libre Baskerville", serif;
+  font-family: var(--font-family-libre);
   font-weight: normal;
   color: #fff;
   margin-bottom: 5rem;
@@ -446,7 +453,7 @@ header {
 
 .package h3 {
   padding: 1rem;
-  font-family: "Inter", serif;
+  font-family: var(--font-family-inter);
   font-weight: bold;
   font-size: 1rem;
 }
@@ -454,10 +461,10 @@ header {
 .package p,
 .cards p {
   padding: 0 1rem 1rem 1rem;
-  font-family: "Libre Baskerville", serif;
+  font-family: var(--font-family-libre);
   font-weight: normal;
   font-size: 0.65rem;
-  color: #767676;
+  color: var(--color-text-grey);
 }
 
 .book-now {
@@ -466,7 +473,7 @@ header {
   font-size: 0.6rem;
   text-transform: capitalize;
   padding: 0.8rem 1.2rem;
-  background-color: #008acb;
+  background-color: var(--color-lighterblue);
 }
 
 .price {
@@ -474,7 +481,7 @@ header {
   padding: 0rem 1rem;
   font-weight: bold;
   font-size: 1.5rem;
-  color: #008acb;
+  color: var(--color-lighterblue);
 }
 
 .book-now:hover {
@@ -522,7 +529,7 @@ header {
   font-family: 'Inter', sans-serif;
   font-weight: bold;
   font-size: 0.9rem;
-  color: #767676;
+  color: var(--color-text-grey);
   padding: 1rem 0 0.5rem 0;
 }
 
@@ -549,7 +556,7 @@ header {
 }
 
 .testimonal-buttons label.active {
-  background: #008ACB;
+  background: var(--color-lighterblue);
 }
 
 .package1 .date {
@@ -571,7 +578,7 @@ header {
   font-family: 'Inter', sans-serif;
   font-weight: bold;
   font-size: 0.7rem;
-  color: #008ACB;
+  color: var(--color-lighterblue);
 }
 
 .special-offer {
@@ -584,7 +591,7 @@ header {
 .special-offer_left {
   width: 40%;
   padding: 3rem 0;
-  background-color: #0075bf;
+  background-color: var(--color-lighterblue);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -592,19 +599,19 @@ header {
 
 .special-offer_p1 {
   font-size: 1.1rem;
-  font-family: "Libre Baskerville", serif;
+  font-family: var(--font-family-libre);
 }
 
 .special-offer_p2 {
   font-size: 2rem;
-  font-family: "Inter", serif;
+  font-family: var(--font-family-inter);
   font-weight: 300;
   margin: 0.2rem 0;
 }
 
 .special-offer_p3 {
   font-size: 3rem;
-  font-family: "Inter", serif;
+  font-family: var(--font-family-inter);
   font-weight: 800;
   line-height: 45px;
 }
@@ -644,7 +651,7 @@ header {
 .thailand {
   margin: 1.5rem 0 0.6rem;
   font-size: 1.5rem;
-  font-family: "Inter", serif;
+  font-family: var(--font-family-inter);
   font-weight: bold;
 }
 
@@ -743,7 +750,7 @@ header {
 } */
 
 .newsletter {
-  background-color: #003768;
+  background-color: var(--color-darkblue);
 }
 
 .subscribe {
@@ -832,7 +839,7 @@ footer {
   font-family: "Libre Baskerville", sans-serif;
   font-weight: normal;
   font-size: 0.6rem;
-  color: #767676;
+  color: var(--color-text-grey);
   padding-bottom: 1rem;
   width: 15rem;
   line-height: 1rem;
@@ -860,7 +867,7 @@ footer {
   font-family: "Libre Baskerville", sans-serif;
   font-weight: normal;
   font-size: 0.7rem;
-  color: #767676;
+  color: var(--color-text-grey);
   padding-bottom: 0.5rem;
 }
 
@@ -919,6 +926,7 @@ footer .bottom-container .bottom-cards img {
     grid-column-end: 3;
   }
 }
+
 @media (max-width: 768px) {
   .container {
     width: 80%;
@@ -960,7 +968,7 @@ footer .bottom-container .bottom-cards img {
     margin: 0;
     padding: 2rem 0;
     width: 100%;
-    background-color: #0075bf;
+    background-color: var(--color-lighterblue);
   }
 
   .menu>li a {
@@ -974,5 +982,48 @@ footer .bottom-container .bottom-cards img {
 
   #home {
     color: #fff;
+  }
+}
+
+
+
+/*------------------- RESPONSIVE -------------- */
+
+@media (min-width: 768px) {
+  .banner-form__destination {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media (max-width: 550px) {
+  .package {
+    width: 100%;
+  }
+
+  .special-offer_left {
+    padding-left: 2rem;
+  }
+
+  .special-offer_right {
+    padding: 1rem 0 2rem 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .countdown-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .countdown-container>div {
+    width: 45%;
+  }
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 100%;
+    padding: 0 1.2rem;
   }
 }
