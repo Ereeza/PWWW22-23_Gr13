@@ -12,12 +12,50 @@
     <link rel="stylesheet" href="style/style1.css">
     <link href="style/bookNow.css" rel="stylesheet" />
     <script src="js/bookNowFunctions.js" type="text/JavaScript"></script>
+    <style>
+      canvas{
+          border: 1px solid #c3c3c3;
+          background-color: #c3c3c3;
+      }
+      .canvas-container {
+        padding: 1rem;
+          text-align: center;
+          margin-bottom: 3rem;
+      }
+
+      .canvas-container h1 {
+          font-size: 2rem;
+          padding: 2rem;
+      }
+  </style>
   </head>
   <body>
-    <div>
-    <button><a href="index.html">Go to HomePage</a></button>
-    </div>
     <main>
+    <section class="canvas-container">
+      <div>
+        <button><a href="index.html">Go to HomePage</a></button>
+        </div>
+      <canvas id="canvas" width="1300" height="450" style="border: 1px solid #c3c3c3;"></canvas>
+      <script>
+          var canvas = document.getElementById('canvas');
+          context = canvas.getContext('2d');
+
+          var grd = context.createLinearGradient(100, 200, 200, 0);
+          grd.addColorStop(0, "lightblue");
+          grd.addColorStop(1, "white");
+          context.fillStyle = grd;
+          context.fillRect(0, 0, 1300, 450);
+          image1 = new Image();
+          image1.src = 'assets/images/bookkNoww.jpg';
+          image1.onload = function(){
+              context.drawImage(image1, 10, 10,1280, 430);
+              context.font = "bold 40pt  Libre Baskerville";
+              context.fillStyle = "#000";
+              context.fillText("Our Packages", 470, 250);
+          };
+      </script>
+    </section>
+    <section class="booking">
       <table class="avaiable-pacakges">
         <caption class="avaiable-packages-title">Avaiable Packages</caption>
         <thead>
@@ -56,7 +94,7 @@
                 outputWithFood(withFood);
               </script>
             </td>
-          </tr>
+            </tr>
           <tr class="total" id="all-total">
             <td colspan="3">Total</td>
             <td class="result">
@@ -67,6 +105,7 @@
           </tr>
         </tbody>
       </table>
-    </main>
+    </section>
+  </main>
   </body>
 </html>
