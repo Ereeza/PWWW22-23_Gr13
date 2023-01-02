@@ -1,0 +1,136 @@
+body {
+    background-color: #f9f6f6;
+    font-family: "Libre Baskerville", sans-serif;
+  }
+  
+  div {
+    position: relative;
+    top: 0;
+    left: 1145px;
+    font-size: 1rem;
+    color: #666b85;
+    width: 15%;
+    background-color: aliceblue;
+  }
+  button {
+    width: 100%;
+    padding: 1rem;
+    background-color: aliceblue;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  table + table {
+    margin-left: 3rem;
+  }
+  
+  caption {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem 0;
+    color: #12263f;
+    background-color: #f9f6f6;
+  }
+  
+  .avaiable-pacakges {
+    margin: 1rem;
+    border-radius: 15px;
+    border-collapse: collapse;
+    width: 60%;
+    border: 3px solid grey;
+  }
+  
+  .avaiable-pacakges:hover {
+    box-shadow: 0 5px 10px grey;
+  }
+  
+  .avaiable-pacakges img {
+    width: 120px;
+  }
+  
+  .avaiable-pacakges th {
+    color: white;
+    background-color: #12263f;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    border:4px solid #666b85;
+  }
+  
+  .packageIndex {
+    width: 10%;
+  }
+  
+  .avaiable-pacakges tr {
+    border: 1px solid grey;
+    color: #666b85;
+    font-size: 16px;
+    font-weight: normal;
+  }
+  
+  .avaiable-pacakges td {
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+    font-size: 16px;
+    border-right: 1px solid grey;
+  }
+  
+  .avaiable-pacakges tr:nth-child(even) {
+    background-color: rgb(225, 234, 238);
+  }
+  
+  .avaiable-pacakges tr:nth-child(odd) {
+    background-color:aliceblue;
+  }
+  
+  .avaiable-pacakges tr:hover {
+    background-color: lightblue;
+  }
+  
+  .booked-package {
+    margin-right: 2rem;
+    width: 40%;
+    border: 3px solid grey;
+    border-collapse:separate;
+    border-radius: 6px;
+    background-color: #f9f6f6;
+  }
+  
+  .booked-package td {
+    border: 1px dashed black;
+    padding: 10px;
+  }
+  
+  .booked-package .result {
+    text-align: center;
+  }
+  
+  .booked-package #all-total {
+    background-color: #666b85;
+  }
+  .booked-package #all-total:hover{
+    background-color:lightblue;
+  }
+  
+  .booked-package   tr:first-child {
+    border-top-left-radius: 15px;
+  }
+  
+  .booked-package th:last-child {
+    border-top-right-radius: 15px;
+  }
+  
+  
+  .booked-package td, th {
+    border-left:dashed black 1px;
+  }

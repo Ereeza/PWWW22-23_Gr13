@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Now</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/style1.css">
+    <link href="style/bookNow.css" rel="stylesheet" />
+    <script src="js/bookNowFunctions.js" type="text/JavaScript"></script>
+  </head>
+  <body>
+    <div>
+    <button><a href="index.html">Go to HomePage</a></button>
+    </div>
+    <main>
+      <table class="avaiable-pacakges">
+        <caption class="avaiable-packages-title">Avaiable Packages</caption>
+        <thead>
+          <th class="packageIndex">Package Index</th>
+          <th colspan="2">Package</th>
+          <th>Price for Person</th>
+        </thead>
+        <tbody>
+          <script src="js/bookNow.js" type="text/JavaScript"></script>
+        </tbody>
+      </table>
+      <table class="booked-package">
+        <caption>Your Booked Package</caption>
+        <tbody>
+          <script src="js/bookNow.js" type="text/JavaScript"></script>
+          <tr class="total">
+            <td colspan="3">Booked Package</td>
+            <td class="result">
+              <script>
+                document.write(packageIndex);
+              </script>
+            </td>
+          </tr>
+          <tr class="total">
+            <td colspan="3">Number of Persons</td>
+            <td class="result">
+              <script>
+                document.write(numOfPersons);
+              </script>
+            </td>
+          </tr>
+          <tr class="total">
+            <td colspan="3">With or Without Food</td>
+            <td class="result">
+              <script>
+                outputWithFood(withFood);
+              </script>
+            </td>
+          </tr>
+          <tr class="total" id="all-total">
+            <td colspan="3">Total</td>
+            <td class="result">
+              <script>
+                outputCurrency(total);
+              </script>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
