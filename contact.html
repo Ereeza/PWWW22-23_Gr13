@@ -1,90 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style/contact.css" />
-    <title>Contact</title>
-  </head>
-  <body>
-    <main class="contactContainer">
-      <div class="contact">
-        <h1 class="contact__title">Contact</h1>
-        <form class="contact__form" id="form">
-          <div class="contact__inputGroup">
-            <label>Email:</label>
-            <br />
-            <input type="email" placeholder="Email" id="email" />
-            <span id="emailErrorMessage" class="errors"></span>
-          </div>
-          <div class="contact__inputGroup">
-            <label>Comment:</label>
-            <br />
-            <textarea
-              placeholder="Comment"
-              id="comment"
-              cols="20"
-              rows="10"
-            ></textarea>
-            <span id="commentErrorMessage" class="errors"></span>
-          </div>
-          <span id="successfulMessage" class="successfulMessage"></span>
-          <input type="submit" />
-        </form>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style/style1.css" />
+  <link rel="stylesheet" href="style/contact.css" />
+  <title>Contact</title>
+</head>
+
+<body>
+  <header>
+    <div class="top-nav row">
+      <div class="container row">
+        <div class="top-nav_left">
+          <a href="mailto:contasct@example.com">contact@example.com</a>
+          <a href="#">(00)-000-000</a>
+        </div>
+        <div class="top-nav_right">
+          <a href="signIn.html">Sign In</a>
+          <a href="signUp.html">Sign Up</a>
+          <a href="#">Cart</a>
+          <a href="#">My Account</a>
+        </div>
       </div>
-    </main>
+    </div>
+    <div class="main-nav">
+      <div class="container row">
+        <div class="nav-wrapper">
+          <img class="logo" src="assets/images/logo.png" id="logo" alt="Travel Dream" />
+          <input id="menu-toggle" type="checkbox" />
+          <label class="menu-button-container" for="menu-toggle">
+            <div class="menu-button"></div>
+          </label>
+          <ul class="menu">
+            <li><a href="index.html" id="active">Home</a></li>
+            <li><a href="aboutUs.html">About</a></li>
+            <li><a href="tours.html">Tours</a></li>
+            <li><a href="#">Packages</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="contactContainer">
+    <div class="contact_banner">
+      <h1>More than just a website</h1>
+    </div>
+    <div class="get_in_touch">
+      <h2>Get in touch</h2>
+      <p class="needHelp">If you have any questions or need help, please fill out the form below.
+        We do our best to respond within 1 business day.
+      </p>
+    </div>
+    <div class="contact">
+      <form class="contact__form" id="form">
+        <div class="contact__inputGroup">
+          <label>Name:</label>
+          <br>
+          <input type="text" placeholder="Name" id="name">
+          <span id="nameErrorMessage" class="errors"></span>
+        </div>
+        <div class="contact__inputGroup">
+          <label>Email:</label>
+          <br />
+          <input type="email" placeholder="Email" id="email" />
+          <span id="emailErrorMessage" class="errors"></span>
+        </div>
+        <div class="contact__inputGroup">
+          <label>Comment:</label>
+          <br />
+          <textarea placeholder="Comment" id="comment" cols="20" rows="10"></textarea>
+          <span id="commentErrorMessage" class="errors"></span>
+        </div>
+        <span id="successfulMessage" class="successfulMessage"></span>
+        <input type="submit" />
+      </form>
+    </div>
+    <div class="our-address">
+      <div class="contact-description">
+        <p>
+          We would love to hear from you. If you have questions regarding any of our service
+          or featured destination&amp;s, please don&apos;t hesitate to call us at the <u>following numbers</u>:
+        </p>
+        <h4 class="tel-number"><em>Telephone:</em></h4>
+        <a href="#" class="number">(00)-000-000</a> <br>
+        <a href="#" class="number">(00)-000-000</a>
+      </div>
+      <div class="contact-link">
+        <div class="contact-address">
+          <address>
+            Visit us at:<br>
+            <mark>Box 564, Disneyland</mark><br>
+            <mark><strong><abbr title="United Stated of America">USA</abbr></strong></mark>
+          </address>
+        </div>
+        <div class="contact-map">
+          <h4 class="map-title">Map:</h4>
+          <!-- Google Map Copied Code -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.2233913121413!2d77.4051603706222!3d28.50292593193056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce626851f7009%3A0x621185133cfd1ad1!2sGeeksforGeeks!5e0!3m2!1sen!2sin!4v1585040658255!5m2!1sen!2sin"
+            width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+            tabindex="0">
+          </iframe>
+        </div>
+      </div>
 
-    <script>
-      const emailInput = document.getElementById("email");
-      const commentInput = document.getElementById("comment");
-      const emailErrorMessage = document.getElementById("emailErrorMessage");
-      const commentErrorMessage = document.getElementById(
-        "commentErrorMessage"
-      );
-      const successfulMessage = document.getElementById("successfulMessage");
+    </div>
+  </main>
+  <footer>
+    <div class="footer container">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>Travel Dream</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <h4>Connect with us</h4>
+          <ul class="social-networks">
+            <li>
+              <a href="https://twitter.com/" target="_blank"><img src="assets/icons/twitter.svg"
+                  alt="twitter icon" /></a>
+            </li>
+            <li>
+              <a href="https://myaccount.google.com/" target="_blank"><img src="assets/icons/google-plus.svg"
+                  alt="google-plus icon" /></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/"><img src="assets/icons/linkedin.svg" target="_blank"
+                  alt="linkedin icon" /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Testimonals</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Destinations</h4>
+          <ul>
+            <li>China</li>
+            <li>Venezuela</li>
+            <li>Brazil</li>
+            <li>Australia</li>
+            <li>London</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our activities</h4>
+          <ul>
+            <li>Trekking</li>
+            <li>Peak Climbing</li>
+            <li>Biking</li>
+            <li>River Rafting</li>
+            <li>Cultural Tours</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-details">
+      <div class="bottom-container">
+        <div class="bottom-text">
+          <span>&copy; Copyright 2020. TravelloLife, Designed by
+            <a href="https://themeforest.net/search/jungle" target="_blank">Templates Jungle</a></span>
+        </div>
+        <div class="bottom-cards">
+          <img src="assets/images/master-card.png" alt="Master Card" />
+          <img src="assets/images/visa.png" alt="Visa" />
+          <img src="assets/images/american-express.png" alt="American Express" />
+        </div>
+      </div>
+    </div>
+  </footer>
 
-      document.getElementById("form").addEventListener("submit", (event) => {
-        try {
-          let errors = {
-            email: "",
-            comment: "",
+  <script>
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const commentInput = document.getElementById("comment");
+    const nameErrorMessage = document.getElementById("nameErrorMessage");
+    const emailErrorMessage = document.getElementById("emailErrorMessage");
+    const commentErrorMessage = document.getElementById(
+      "commentErrorMessage"
+    );
+    const successfulMessage = document.getElementById("successfulMessage");
+
+    document.getElementById("form").addEventListener("submit", (event) => {
+      try {
+        let errors = {
+          name: "",
+          email: "",
+          comment: "",
+        };
+
+        event.preventDefault();
+
+        if (nameInput.value.length === 0) {
+          errors = {
+            ...errors,
+            name: "Name is required!",
           };
-
-          event.preventDefault();
-
-          if (emailInput.value.length === 0) {
-            errors = {
-              ...errors,
-              email: "Email is required!",
-            };
-          }
-
-          if (commentInput.value.length === 0) {
-            errors = {
-              ...errors,
-              comment: "Comment is required!",
-            };
-          }
-
-          if (errors.email || errors.comment) {
-            throw errors;
-          } else {
-            successfulMessage.textContent =
-              "Thank you for contacting us! We will answer as soon as possible.";
-
-            emailErrorMessage.textContent = "";
-            commentErrorMessage.textContent = "";
-          }
-        } catch (errors) {
-          emailErrorMessage.textContent = errors.email;
-          commentErrorMessage.textContent = errors.comment;
         }
-      });
-    </script>
-  </body>
+
+        if (emailInput.value.length === 0) {
+          errors = {
+            ...errors,
+            email: "Email is required!",
+          };
+        }
+
+        if (commentInput.value.length === 0) {
+          errors = {
+            ...errors,
+            comment: "Comment is required!",
+          };
+        }
+
+        if (errors.email || errors.comment) {
+          throw errors;
+        } else {
+          successfulMessage.textContent =
+            "Thank you for contacting us! We will answer as soon as possible.";
+
+          nameErrorMessage.textContent = "";
+          emailErrorMessage.textContent = "";
+          commentErrorMessage.textContent = "";
+        }
+      } catch (errors) {
+        nameErrorMessage.textContent = errors.name;
+        emailErrorMessage.textContent = errors.email;
+        commentErrorMessage.textContent = errors.comment;
+      }
+    });
+  </script>
+</body>
+
 </html>

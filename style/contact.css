@@ -6,15 +6,45 @@
 
 body {
   font-family: "Libre Baskerville", serif;
-  background-image: linear-gradient(
-      rgba(13, 13, 13, 1) 0%,
-      rgba(13, 13, 13, 0.6) 100%
-    ),
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_banner {
+  background-image: linear-gradient(rgb(13, 13, 13) 0%,
+      rgba(13, 13, 13, 0.6) 100%),
     url("../assets/images/contact.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  min-width: 210vh;
+  min-height: 50vh;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+  padding: 8rem;
+  font-size: 2.5rem;
+}
+
+.get_in_touch {
+  text-align: center;
+}
+
+h2 {
+  padding: 3rem;
+  font-size: 2rem;
+  font-family: 'Inter';
+  font-weight: 400;
+}
+
+.needHelp {
+  padding: 2rem;
+  font-size: 1rem;
 }
 
 input,
@@ -64,10 +94,13 @@ input[type="submit"]:focus {
 .contact {
   width: min(100%, 700px);
   background-color: #e7e7e7;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   border-radius: 10px;
   padding: 3.5rem 1.25rem;
+  margin-bottom: 3.5rem;
+}
+
+.contact:hover {
+  box-shadow: 0px 3px 8px hsl(0, 0%, 80%);
 }
 
 .contact__title {
@@ -85,7 +118,7 @@ input[type="submit"]:focus {
   width: 75%;
 }
 
-.contact__inputGroup + .contact__inputGroup {
+.contact__inputGroup+.contact__inputGroup {
   margin-top: 1.25rem;
 }
 
@@ -100,6 +133,74 @@ input[type="submit"]:focus {
   font-size: 0.875rem;
 }
 
+.our-address {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.contact-description {
+  padding: 5rem;
+  font-size: 1rem;
+  background-color: #003768;
+  color: #fff;
+}
+
+.contact-description p {
+  font-size: 1rem;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+}
+
+.contact-link {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  justify-content: center;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: left;
+  color: #e7e7e7;
+  padding-bottom: 0.5rem;
+}
+
+.number {
+  padding: 1rem;
+  text-align: left;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #fff;
+}
+
+.contact-address {
+  font-size: 1rem;
+  font-weight: 200;
+  color: #003768;
+  line-height: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+mark {
+  background-color: #e7e7e7;
+}
+
+abbr {
+  text-decoration: none;
+}
+
+.map-title {
+  color: #003768;
+  font-weight: 700;
+  padding-bottom: 2rem;
+}
+
+
+
 @media (max-width: 715px) {
   .contactContainer {
     padding: 2.5rem 0.5rem;
@@ -107,6 +208,7 @@ input[type="submit"]:focus {
 }
 
 @media (max-width: 500px) {
+
   .contact__inputGroup,
   input[type="submit"] {
     width: 90%;
