@@ -2,42 +2,56 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  
-  body {
+}
+
+body {
     font-family: "Libre Baskerville", serif;
-  }
+}
 
-  main {
+.aboutUs-row {
     display: flex;
-    flex-direction: column;
-  }
+}
 
-.mission, .story, .values {
+.aboutUs-col {
+    width: 50%;
+}
+
+.aboutUs-col_image {
+    background-color: var(--color-darkblue);
+}
+
+.aboutUs-col_video {
     display: flex;
-    flex-direction: row;
+    align-items: baseline;
+}
+
+.aboutUs-col_content {
+    display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 5.5rem;
+
 }
 
-.our-mission, .our-story, .our-values, .our-services{
-    padding: 2rem;
+.text-container {
+    text-align: center;
 }
 
- h1 {
+h1 {
     font-family: 'Caramel';
     font-size: 3rem;
     font-weight: 700;
     text-align: center;
     color: rgb(43, 118, 179);
+    margin-bottom: 1rem;
 }
 
-.our-mission p, .our-story p, .our-values p {
-    padding: 1rem 5rem;
+.text-container p {
     font-size: medium;
     font-weight: normal;
     color: darkslategray;
-    text-align: center;
+    padding-bottom: 1.5rem;
+
 }
 
 .moto {
@@ -45,25 +59,41 @@
     background-color: rgb(132, 170, 190);
 }
 
-.value {
+.svg-container {
     padding: 9.4rem;
     background-color: rgb(132, 170, 190);
 }
 
-.our-values ul {
-    padding: 1rem 8rem;
+
+.aboutUs-col ul {
     font-size: medium;
     font-weight: normal;
+    margin-left: 2.5rem;
     color: darkslategray;
     text-align: left;
     list-style-type: circle;
 }
 
-.services-row  {
+.aboutUs-col ul li {
+    padding: .35rem;
+}
+
+.our-services {
+    background-color: #eee;
+    padding: 2rem 0;
+}
+
+
+.services-container {
+    margin: 0 auto;
+    width: 60%;
+}
+
+.services-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 2rem 4rem;
+    padding: 2rem 1rem;
     color: rgb(19, 48, 48);
     font-size: 1.2rem;
     font-weight: 900;
@@ -80,8 +110,39 @@
 }
 
 
-.services {
-    padding-top: 5rem;
-    width: 100%;
-    background-color: beige;
+@media (max-width: 1100px) {
+    .aboutUs-row {
+        flex-direction: column;
+    }
+
+    .aboutUs-col {
+        width: 100%;
+    }
+
+    .aboutUs-row:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+
+    .aboutUs-col_content {
+        padding: 2.5rem;
+    }
+
+    .moto {
+        display: flex;
+    }
+
+    .services-container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 850px) {
+    .services-row {
+        flex-direction: column;
+    }
+
+    .line-service {
+        width: 100%;
+        margin-left: 5rem;
+    }
 }
