@@ -10,47 +10,50 @@ body {
 
 main {
   width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: row;
+  background-color: #f9f6f6;
+}
+
+.flex-col {
+  width: 80%;
+  padding: 6rem;
 }
 
 .discover {
-  padding: 5rem 3rem 5rem 3rem;
-  justify-content: center;
-  align-items: center;
+  /* padding: 5rem 3rem 5rem 3rem; */
   background-color: #003768;
+  display: flex;
+  justify-content: center;
+
 }
+
 .discover h1 {
   font-size: 1.5rem;
   font-weight: 300;
   color: #f9f6f6;
 }
 
-img {
+.forgotImage img {
   padding: 5rem;
 }
 
+.discover-content {
+  text-align: center;
+}
+
 h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-family: 'Caramel';
   font-weight: 200;
   color: #f9f6f6;
+  margin-top: 3.5rem;
 }
 
-.signIn {
-  padding-top: 2.55rem;
-  padding-left: 14rem;
-  padding-right: 14rem;
-  padding-bottom: 5rem;
-  justify-content: center;
-  align-items: center;
-  background-color: #f9f6f6;
-}
-
-.isMember{
+.isMember {
   text-align: right;
   font-size: 0.8rem;
-  padding-bottom: 3rem;
 }
 
 .access {
@@ -72,10 +75,6 @@ input:focus {
   outline: 1px solid #003768;
   border-radius: 4px;
 }
-
-
-
-
 
 input[type="submit"] {
   background-color: #003768;
@@ -111,11 +110,15 @@ input[type="submit"]:focus {
   width: 75%;
 }
 
-.access__inputGroup + .access__inputGroup {
+.access__inputGroup+.access__inputGroup {
   margin-top: 1.25rem;
 }
 
-.homePage{
+.forgotPassword_form {
+  padding-left: 1rem;
+}
+
+.homePage {
   text-align: center;
   width: min(100%, 700px);
   text-decoration: none;
@@ -151,6 +154,7 @@ input[type="submit"]:focus {
 }
 
 @media (max-width: 500px) {
+
   .access__inputGroup,
   input[type="submit"] {
     width: 90%;
