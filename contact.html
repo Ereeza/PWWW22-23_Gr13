@@ -50,68 +50,76 @@
     </div>
   </header>
   <main class="contactContainer">
-    <div class="contact_banner">
-      <h1>More than just a website</h1>
-    </div>
-    <div class="get_in_touch">
-      <h2>Get in touch</h2>
-      <p class="needHelp">If you have any questions or need help, please fill out the form below.
-        We do our best to respond within 1 business day.
-      </p>
-    </div>
-    <div class="contact">
-      <form class="contact__form" id="form">
-        <div class="contact__inputGroup">
-          <label>Name:</label>
-          <br>
-          <input type="text" placeholder="Name" id="name">
-          <span id="nameErrorMessage" class="errors"></span>
-        </div>
-        <div class="contact__inputGroup">
-          <label>Email:</label>
-          <br />
-          <input type="email" placeholder="Email" id="email" />
-          <span id="emailErrorMessage" class="errors"></span>
-        </div>
-        <div class="contact__inputGroup">
-          <label>Comment:</label>
-          <br />
-          <textarea placeholder="Comment" id="comment" cols="20" rows="10"></textarea>
-          <span id="commentErrorMessage" class="errors"></span>
-        </div>
-        <span id="successfulMessage" class="successfulMessage"></span>
-        <input type="submit" />
-      </form>
-    </div>
-    <div class="our-address">
-      <div class="contact-description">
+    <section class="contactContainer_row">
+      <div class="contactContainer_row_row">
+        <div class="contact-need">
         <p>
-          We would love to hear from you. If you have questions regarding any of our service
-          or featured destination&amp;s, please don&apos;t hesitate to call us at the <u>following numbers</u>:
+          If you have any questions or need help, please fill out the form below.
+          We do our best to respond within 1 business day.
         </p>
-        <h4 class="tel-number"><em>Telephone:</em></h4>
-        <a href="#" class="number">(00)-000-000</a> <br>
-        <a href="#" class="number">(00)-000-000</a>
-      </div>
-      <div class="contact-link">
-        <div class="contact-address">
-          <address>
-            Visit us at:<br>
-            <mark>Hajdar Dushi, Prishtina</mark><br>
-            <mark><strong><abbr title="Republika e Kosoves">RKS</abbr></strong></mark>
-          </address>
         </div>
-        <div class="contact-map">
-          <h4 class="map-title">Map:</h4>
-          <iframe
-            src="https://maps.google.com/maps?q=42.6620%C2%B0%20N,%2021.1622%C2%B0%20E&t=&z=13&ie=UTF8&iwloc=&output=embed"
-            width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-            tabindex="0">
-          </iframe>
+        <div class="contact">
+          <form class="contact__form" id="form">
+            <div class="contact__inputGroup">
+              <label>Name:</label>
+              <br>
+              <input type="text" placeholder="Name" id="name">
+              <span id="nameErrorMessage" class="errors"></span>
+            </div>
+            <div class="contact__inputGroup">
+              <label>Email:</label>
+              <br />
+              <input type="email" placeholder="Email" id="email" />
+              <span id="emailErrorMessage" class="errors"></span>
+            </div>
+            <div class="contact__inputGroup">
+              <label>Comment:</label>
+              <br />
+              <textarea placeholder="Comment" id="comment" cols="20" rows="10"></textarea>
+              <span id="commentErrorMessage" class="errors"></span>
+            </div>
+            <span id="successfulMessage" class="successfulMessage"></span>
+            <input type="submit" />
+          </form>
         </div>
       </div>
-
-    </div>
+    </section>
+    <section class="contactContainer">
+      <div class="our-address">
+        <div class="contact-description">
+          <p>
+            We would love to hear from you. If you have questions regarding any of our service
+            or featured destination&apos;s, please don&apos;t hesitate to call us at the <u>following numbers</u>:
+          </p>
+          <div class="description-col">
+            <div class="telephone">
+              <h4 class="tel-number"><em>Telephone:</em></h4>
+              <a href="#" class="number">(00)-000-000</a> <br>
+              <a href="#" class="number">(00)-000-000</a>
+            </div>
+            <div class="find-location">
+              <a href="geoLocation.html">Find your location</a>
+            </div>
+        </div>
+        </div>
+        <div class="contact-link">
+          <div class="contact-address">
+            <address>
+              Visit us at:<br>
+              <mark>Hajdar Dushi, Prishtina</mark><br>
+              <mark><strong><abbr title="Republika e Kosoves">RKS</abbr></strong></mark>
+            </address>
+          </div>
+          <div class="contact-map">
+            <h4 class="map-title">Map:</h4>
+            <iframe
+              src="https://maps.google.com/maps?q=42.6620%C2%B0%20N,%2021.1622%C2%B0%20E&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              width="400" height="200" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+              tabindex="0">
+            </iframe>
+          </div>
+        </div>
+    </section>
   </main>
   <footer>
     <div class="footer container">
