@@ -23,13 +23,17 @@ section {
     margin-bottom: 5rem;
 }
 
-.local-recommendations__images {
+.grid {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 1rem;
 }
 
-.recommendation {
+.tour-title {
+    padding-bottom: 1rem;
+}
+
+.tour {
     position: relative;
     display: inline-block;
     border-radius: 15px;
@@ -39,31 +43,58 @@ section {
     transition: 0.4s all ease-in-out;
 }
 
-.recommendation img {
+.tour img {
+    height: 250px;
+    max-height: 250px;
+    width: 100%;
+    object-fit: fill;
     border-radius: 5px;
-    height: 100%;
-    object-fit: fit;
+    filter: brightness(0.6);
 }
 
 
-.recommendation:hover {
+.tour:hover {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     cursor: pointer;
     transform: scale(1.1);
 }
 
-.recommendation span {
+.tour span {
     color: white;
     font-family: "Inter", serif;
     font-weight: bold;
     font-size: 1.25rem;
     position: absolute;
     text-align: center;
+    z-index: 999;
 }
 
-.recommendation span:before {
+.tour span:before {
     display: inline-block;
     vertical-align: middle;
     height: 100%;
     content: "";
+}
+
+.preferences-container {
+    display: flex;
+    justify-content: center;
+}
+
+.preferences-container p {
+    font-size: .9rem;
+    font-weight: normal;
+    color: darkslategray;
+    padding-bottom: 1.5rem;
+}
+
+.preferences {
+    margin-left: 1rem;
+}
+
+.preferences li {
+    padding: 0.5rem;
+    border: 1px solid black;
+    margin-bottom: 0.5rem;
+    width: 25%;
 }
