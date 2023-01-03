@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Libre Baskerville", serif;
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.35rem;
+  border-radius: 4px;
+  border: 1px solid black;
+  font-size: 0.938rem;
+}
+
+input:focus {
+  outline: 1px solid #003768;
+  border-radius: 4px;
+}
+
+input[type="submit"],
+.myAccount__cancel {
+  background-color: #003768;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 4px;
+  padding: 0.7rem;
+  margin-top: 0;
+  font-size: 0.938rem;
+}
+
+input[type="submit"]:focus,
+.myAccount__cancel {
+  outline: none;
+}
+
+.myAccount__banner {
+  position: relative;
+  background-image: linear-gradient(180deg,
+      rgba(0, 55, 104, 1) 0%,
+      rgba(87, 125, 158, 0.5) 100%),
+    url("../assets/images/myAccountBanner.jpeg");
+  width: 100%;
+  height: 30vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.custom-shape-divider-top-1672500804 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1672500804 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 79px;
+}
+
+.custom-shape-divider-top-1672500804 .shape-fill {
+  fill: #fff;
+}
+
+.myAccount__Card {
+  width: 35%;
+  margin-top: -10rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.myAccount__Card-image {
+  filter: grayscale(60%);
+}
+
+.myAccount__Card-title {
+  padding: 3rem 0;
+}
+
+.myAccount__Card-title h1 {
+  font-family: "Libre Baskerville", serif;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.slide-top {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+
+@keyframes slide-top {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+  }
+}
+
+.myAccount__info {
+  display: flex;
+  padding: 5rem 0;
+}
+
+.myAccount__form-wrapper {
+  width: 65%;
+}
+
+.successfulMessage {
+  padding-left: 2rem;
+  margin-top: 1rem;
+  width: 75%;
+  color: #41a233;
+  font-size: 0.875rem;
+}
+
+.myAccount__form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
+  padding-left: 2rem;
+}
+
+.myAccount__form label {
+  font-size: 0.875rem;
+}
+
+.myAccount__inputGroup {
+  width: 100%;
+}
+
+.myAccount__inputGroup:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.myAccount__inputGroup:nth-child(4) {
+  display: flex;
+  gap: 0.5rem;
+  grid-column-start: 2;
+}
+
+.myAccount__cancel {
+  background-color: #fff;
+  color: #003768;
+  border: 1px solid #003768;
+  transition: 0.3s;
+}
+
+.myAccount__cancel:hover {
+  background-color: #003768;
+  color: #fff;
+}
+
+.errors {
+  font-size: 0.7rem;
+  color: red;
+}
