@@ -159,6 +159,21 @@
         </div>
       </div>
     </section>
+    <section class="preferences-container">
+      <div class="container">
+        <h2 class="section-title">Your preferences</h2>
+        <p>Sort our most visited places based on your preferences</p>
+        <div class="preferences">
+          <ol>
+            <li class="rateItem" id='0' draggable="true">Italy</li>
+            <li class="rateItem" id='1' draggable="true">Greece</li>
+            <li class="rateItem" id='2' draggable="true">Spain</li>
+            <li class="rateItem" id='3' draggable="true">France</li>
+            <li class="rateItem" id='4' draggable="true">Thailand</li>
+          </ol>
+        </div>
+      </div>
+    </section>
   </main>
   <footer>
     <div class="footer container">
@@ -233,6 +248,46 @@
   </footer>
 
   <script src="js/tours.js"></script>
+
+  <script>
+    let dragged;
+    let id;
+    let index;
+    let indexDrop;
+    let list;
+
+    document.addEventListener("dragstart", ({ target }) => {
+      dragged = target;
+      id = target.id;
+      list = target.parentNode.children;
+      for (let i = 0; i < list.length; i += 1) {
+        if (list[i] === dragged) {
+          index = i;
+        }
+      }
+    });
+
+    document.addEventListener("dragover", (event) => {
+      event.preventDefault();
+    });
+
+    document.addEventListener("drop", ({ target }) => {
+      if (target.className == "rateItem" && target.id !== id) {
+        dragged.remove(dragged);
+        for (let i = 0; i < list.length; i += 1) {
+          if (list[i] === target) {
+            indexDrop = i;
+          }
+        }
+        console.log(index, indexDrop);
+        if (index > indexDrop) {
+          target.before(dragged);
+        } else {
+          target.after(dragged);
+        }
+      }
+    });
+  </script>
 
 </body>
 

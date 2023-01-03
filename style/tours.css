@@ -86,15 +86,25 @@ section {
     font-weight: normal;
     color: darkslategray;
     padding-bottom: 1.5rem;
+    text-align: center;
+
 }
 
-.preferences {
+.preferences ol {
     margin-left: 1rem;
+    text-align: center;
+    width: 30%;
 }
 
-.preferences li {
+.preferences ol li {
     padding: 0.5rem;
     border: 1px solid black;
+    border-radius: 5px;
     margin-bottom: 0.5rem;
-    width: 25%;
+    
+}
+.preferences{
+    display: flex;
+    justify-content: center;
+
 }
