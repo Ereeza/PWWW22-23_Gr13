@@ -168,6 +168,82 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const nameInput = document.getElementById("name");
+    const emailInput = document.getElementById("email");
+    const passwordInput = document.getElementById("password");
+
+    const emailErrorMessage = document.getElementById("emailErrorMessage");
+    const passwordErrorMessage = document.getElementById(
+      "passwordErrorMessage"
+    );
+    const nameErrorMessage = document.getElementById("nameErrorMessage");
+    const successfulMessage = document.getElementById("successfulMessage");
+
+    let userName = localStorage.getItem("name");
+    let userEmail = localStorage.getItem("email");
+    let userPassword = localStorage.getItem("password");
+
+    nameInput.value = userName;
+    emailInput.value = userEmail;
+    passwordInput.value = userPassword;
+
+    document.getElementById("form").addEventListener("submit", (event) => {
+      try {
+        let errors = {
+          email: "",
+          password: "",
+          name: "",
+        };
+        event.preventDefault();
+
+        if (emailInput.value.length === 0) {
+          errors = {
+            ...errors,
+            email: "Email is required!",
+          };
+        }
+
+        if (passwordInput.value.length === 0) {
+          errors = {
+            ...errors,
+            password: "Password is required!",
+          };
+        }
+
+        if (nameInput.value.length === 0) {
+          errors = {
+            ...errors,
+            name: "Name is required!",
+          };
+        }
+
+        if (errors.email || errors.password || errors.name) {
+          throw errors;
+        } else {
+          successfulMessage.textContent =
+            "You have successfully updated your settings!";
+          setTimeout(() => {
+            successfulMessage.textContent = "";
+          }, 5000);
+
+          emailErrorMessage.textContent = "";
+          passwordErrorMessage.textContent = "";
+          nameErrorMessage.textContent = "";
+
+          localStorage.setItem("name", nameInput.value);
+          localStorage.setItem("email", emailInput.value);
+          localStorage.setItem("password", passwordInput.value);
+        }
+      } catch (errors) {
+        console.log("errors", errors);
+        emailErrorMessage.textContent = errors.email;
+        passwordErrorMessage.textContent = errors.password;
+        nameErrorMessage.textContent = errors.name;
+      }
+    });
+  </script>
 </body>
 
 </html>
