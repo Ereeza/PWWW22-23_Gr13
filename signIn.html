@@ -108,6 +108,7 @@
         if (errors.email || errors.password) {
           throw errors;
         } else {
+          localStorage.setItem("login", true);
           successfulMessage.innerHTML =
             "You have successfully Logged In. Go to <a href='index.html'>Homepage</a>";
 

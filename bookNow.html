@@ -1,119 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Book Now</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style/style1.css" />
-    <link href="style/bookNow.css" rel="stylesheet" />
-    <script src="js/bookNowFunctions.js" type="text/JavaScript"></script>
-    <style>
-      canvas {
-        border: 1px solid #c3c3c3;
-        background-color: #c3c3c3;
-      }
 
-      .canvas-container {
-        padding: 1rem;
-        text-align: center;
-        margin-bottom: 3rem;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Now</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Libre+Baskerville:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style/style1.css" />
+  <link href="style/bookNow.css" rel="stylesheet" />
+  <script src="js/bookNowFunctions.js" type="text/JavaScript"></script>
+  <style>
+    canvas {
+      border: 1px solid #c3c3c3;
+      background-color: #c3c3c3;
+    }
 
-      .canvas-container h1 {
-        font-size: 2rem;
-        padding: 2rem;
-      }
-    </style>
-  </head>
+    .canvas-container {
+      padding: 1rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
 
-  <body>
-    <main>
-      <section class="canvas-container">
-        <canvas
-          id="canvas"
-          width="1300"
-          height="450"
-          style="border: 1px solid #c3c3c3"
-        ></canvas>
-        <script>
-          var canvas = document.getElementById("canvas");
-          context = canvas.getContext("2d");
+    .canvas-container h1 {
+      font-size: 2rem;
+      padding: 2rem;
+    }
+  </style>
+</head>
 
-          var grd = context.createLinearGradient(100, 200, 200, 0);
-          grd.addColorStop(0, "lightblue");
-          grd.addColorStop(1, "white");
-          context.fillStyle = grd;
-          context.fillRect(0, 0, 1300, 450);
-          image1 = new Image();
-          image1.src = "assets/images/bookkNoww.jpg";
-          image1.onload = function () {
-            context.drawImage(image1, 10, 10, 1280, 430);
-            context.font = "bold 40pt  Libre Baskerville";
-            context.fillStyle = "#000";
-            context.fillText("Our Packages", 470, 250);
-          };
-        </script>
-      </section>
-      <section class="booking">
-        <table class="avaiable-pacakges">
-          <caption class="avaiable-packages-title">
-            Avaiable Packages
-          </caption>
-          <thead>
-            <th class="packageIndex">Package Index</th>
-            <th colspan="2">Package</th>
-            <th>Price for Person</th>
-          </thead>
-          <tbody>
-            <script src="js/bookNow.js" type="text/JavaScript"></script>
-          </tbody>
-        </table>
-        <!-- <table class="booked-package">
-          <caption>
-            Your Booked Package
-          </caption>
-          <tbody>
-            <script src="js/bookNow.js" type="text/JavaScript"></script>
-            <tr class="total">
-              <td colspan="3">Booked Package</td>
-              <td class="result">
-                <script>
-                  document.write(packageIndex);
-                </script>
-              </td>
-            </tr>
-            <tr class="total">
-              <td colspan="3">Number of Persons</td>
-              <td class="result">
-                <script>
-                  document.write(numOfPersons);
-                </script>
-              </td>
-            </tr>
-            <tr class="total">
-              <td colspan="3">With or Without Food</td>
-              <td class="result">
-                <script>
-                  outputWithFood(withFood);
-                </script>
-              </td>
-            </tr>
-            <tr class="total" id="all-total">
-              <td colspan="3">Total</td>
-              <td class="result">
-                <script>
-                  outputCurrency(total);
-                </script>
-              </td>
-            </tr>
-          </tbody>
-        </table> -->
-      </section>
-    </main>
-  </body>
+<body>
+  <header>
+    <div class="top-nav row">
+      <div class="container row">
+        <div class="top-nav_left">
+          <a href="mailto:contasct@example.com">contact@example.com</a>
+          <a href="tel:000000">(00)-000-000</a>
+        </div>
+        <div id="topNavRight" class="top-nav_right">
+          <a href="signIn.html">Sign In</a>
+          <a href="signUp.html">Sign Up</a>
+          <a href="cart.html">Cart</a>
+          <a id="myAccount" href="myAccount.html">My Account</a>
+        </div>
+      </div>
+    </div>
+    <div class="main-nav">
+      <div class="container row">
+        <div class="nav-wrapper">
+          <a href="index.html"><img class="logo" src="assets/images/logo.png" id="logo" alt="Travel Dream" /> </a>
+          <input id="menu-toggle" type="checkbox" />
+          <label class="menu-button-container" for="menu-toggle">
+            <div class="menu-button"></div>
+          </label>
+          <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutUs.html">About</a></li>
+            <li><a href="tours.html" id="active">Tours</a></li>
+            <li><a href="index.html#featured-packages">Packages</a></li>
+            <li><a href="index.html#latest-blogs">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="canvas-container">
+      <canvas id="canvas" width="1300" height="450" style="border: 1px solid #c3c3c3"></canvas>
+      <script>
+        var canvas = document.getElementById("canvas");
+        context = canvas.getContext("2d");
+
+        var grd = context.createLinearGradient(100, 200, 200, 0);
+        grd.addColorStop(0, "lightblue");
+        grd.addColorStop(1, "white");
+        context.fillStyle = grd;
+        context.fillRect(0, 0, 1300, 450);
+        image1 = new Image();
+        image1.src = "assets/images/bookkNoww.jpg";
+        image1.onload = function () {
+          context.drawImage(image1, 10, 10, 1280, 430);
+          context.font = "bold 40pt  Libre Baskerville";
+          context.fillStyle = "#000";
+          context.fillText("Our Packages", 470, 250);
+        };
+      </script>
+    </section>
+    <section class="booking">
+      <table class="avaiable-pacakges">
+        <caption class="avaiable-packages-title">
+          Avaiable Packages
+        </caption>
+        <thead>
+          <th class="packageIndex">Package Index</th>
+          <th colspan="2">Package</th>
+          <th>Price for Person</th>
+        </thead>
+        <tbody>
+          <script src="js/bookNow.js" type="text/JavaScript"></script>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <div class="footer container">
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>Travel Dream</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt.
+          </p>
+          <h4>Connect with us</h4>
+          <ul class="social-networks">
+            <li>
+              <a href="https://twitter.com/" target="_blank"><img src="assets/icons/twitter.svg"
+                  alt="twitter icon" /></a>
+            </li>
+            <li>
+              <a href="https://myaccount.google.com/" target="_blank"><img src="assets/icons/google-plus.svg"
+                  alt="google-plus icon" /></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/"><img src="assets/icons/linkedin.svg" target="_blank"
+                  alt="linkedin icon" /></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Quick links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="index.html">Blogs</a></li>
+            <li><a href="index.html">Testimonals</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Destinations</h4>
+          <ul>
+            <li>China</li>
+            <li>Venezuela</li>
+            <li>Brazil</li>
+            <li>Australia</li>
+            <li>London</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our activities</h4>
+          <ul>
+            <li>Trekking</li>
+            <li>Peak Climbing</li>
+            <li>Biking</li>
+            <li>River Rafting</li>
+            <li>Cultural Tours</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-details">
+      <div class="bottom-container">
+        <div class="bottom-text">
+          <span>&copy; Copyright 2020. TravelloLife, Designed by
+            <a href="https://themeforest.net/search/jungle" target="_blank">Templates Jungle</a></span>
+        </div>
+        <div class="bottom-cards">
+          <img src="assets/images/master-card.png" alt="Master Card" />
+          <img src="assets/images/visa.png" alt="Visa" />
+          <img src="assets/images/american-express.png" alt="American Express" />
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
