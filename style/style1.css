@@ -277,7 +277,7 @@ header {
   display: grid;
   -ms-grid-columns: auto 1rem auto 1rem auto 1rem auto;
   grid-template-columns: auto auto auto auto;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .banner-form>div input {
@@ -311,6 +311,18 @@ header {
 .banner-form__icon i {
   font-size: 20px;
   color: white;
+}
+
+.banner-form_flex {
+  position: relative;
+}
+
+.errors {
+  font-size: 0.7rem;
+  color: red;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -1.2rem;
 }
 
 .banner-form>div {
@@ -1334,6 +1346,7 @@ footer .bottom-container .bottom-cards img {
 
 @media (min-width: 768px) {
   .banner-form__destination {
+    grid-column: 1 3;
     -ms-grid-column: 1;
     grid-column-start: 1;
     -ms-grid-column-span: 2;

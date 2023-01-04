@@ -66,46 +66,54 @@
         </div>
 
         <div class="banner-form__wrapper">
-          <form action="" class="banner-form">
-            <div class="banner-form_flex banner-form__destination">
+          <form action="" class="banner-form" id="form">
+            <div class="banner-form_flex banner-form__destination" style="position: relative;">
               <div class="banner-form__icon">
                 <i class="fa-sharp fa-solid fa-location-dot"></i>
               </div>
-              <input type="text" name="destination" id="bannerDestination" placeholder="Where are you going?" />
+              <input type="text" name="destination" id="destination" placeholder="Where are you going?" />
+              <span id="destinationErrorMessage" class="errors"></span>
+
             </div>
             <div class="banner-form_flex banner-form__location">
               <div class="banner-form__icon">
                 <i class="fa-sharp fa-solid fa-location-dot"></i>
               </div>
-              <input type="text" name="location" id="bannerLocation" placeholder="Location" />
+              <input type="text" name="location" id="location" placeholder="Location" />
+              <span id="locationErrorMessage" class="errors"></span>
             </div>
             <div class="banner-form_flex banner-form__tour-type">
               <div class="banner-form__icon">
                 <i class="fa-sharp fa-solid fa-clipboard-check"></i>
               </div>
 
-              <input type="text" name="tourType" id="bannerTourType" placeholder="Tour Type" />
+              <input type="text" name="tourType" id="tourType" placeholder="Tour Type" />
+              <span id="tourTypeErrorMessage" class="errors"></span>
             </div>
             <div class="banner-form_flex banner-form__min-price">
               <div class="banner-form__icon">
                 <i class="fa-sharp fa-solid fa-dollar-sign"></i>
               </div>
-              <input type="number" name="minPrice" id="bannerMinPrice" placeholder="Min price" />
+              <input type="number" name="minPrice" id="minPrice" placeholder="Min price" />
+              <span id="minPriceErrorMessage" class="errors"></span>
             </div>
             <div class="banner-form_flex banner-form__max-price">
               <div class="banner-form__icon">
                 <i class="fa-sharp fa-solid fa-dollar-sign"></i>
               </div>
-              <input type="number" name="maxPrice" id="BannerMaxPrice" placeholder="Max price" />
+              <input type="number" name="maxPrice" id="maxPrice" placeholder="Max price" />
+              <span id="maxPriceErrorMessage" class="errors"></span>
             </div>
             <div class="banner-form_flex banner-form__language">
               <div class="banner-form__icon">
                 <i class="fa-solid fa-earth-asia"></i>
               </div>
-              <input type="text" name="language" id="bannerLanguage" placeholder="Language" />
+              <input type="text" name="language" id="language" placeholder="Language" />
+              <span id="languageErrorMessage" class="errors"></span>
             </div>
             <div class="banner-form_flex search">
               <div>
+                <img src="" alt="" />
               </div>
               <input type="submit" id="bannerSearch" value="Search" />
             </div>
@@ -653,7 +661,6 @@
     };
   </script>
   <script>
-    //subscribe
     const scriptURL =
       "https://script.google.com/macros/s/AKfycbzWwevbSIjV5nhs0y3Dul2PMQSy2hdhDWJ_1J1NTLttMA4qBKw0dIZSrFMPjvfjlpHnFg/exec";
     const form = document.forms["submit-to-google-sheet"];
@@ -738,6 +745,149 @@
   days, hours, minutes or seconds
 */
     countDownClock(83, "days");
+  </script>
+
+  <script>
+    const destinationInput = document.getElementById("destination");
+    const locationInput = document.getElementById("location");
+    const tourTypeInput = document.getElementById("tourType");
+    const minPriceInput = document.getElementById("minPrice");
+    const maxPriceInput = document.getElementById("maxPrice");
+    const languageInput = document.getElementById("language");
+
+    const destinationErrorMessage = document.getElementById("destinationErrorMessage");
+    const locationErrorMessage = document.getElementById("locationErrorMessage");
+    const tourTypeErrorMessage = document.getElementById("tourTypeErrorMessage");
+    const minPriceErrorMessage = document.getElementById("minPriceErrorMessage");
+    const maxPriceErrorMessage = document.getElementById("maxPriceErrorMessage");
+    const languageErrorMessage = document.getElementById("languageErrorMessage");
+
+    document.getElementById("form").addEventListener("submit", (event) => {
+
+      try {
+        let errors = {
+          destination: "",
+          location: "",
+          tourType: "",
+          minPrice: "",
+          maxPrice: "",
+          language: "",
+        };
+        event.preventDefault();
+
+        if (!/^\d*[1-9]\d*$/i.test(minPriceInput.value)) {
+          errors = {
+            ...errors,
+            minPrice: "Only positive numbers are allowed!"
+          }
+        }
+
+        if (!/^\d*[1-9]\d*$/g.test(maxPriceInput.value)) {
+          errors = {
+            ...errors,
+            maxPrice: "Only positive numbers are allowed!"
+          }
+        }
+
+        if (!isNaN(destinationInput.value)) {
+          errors = {
+            ...errors,
+            destination: "Only numbers are not allowed.",
+          };
+        }
+
+        if (!isNaN(locationInput.value)) {
+          errors = {
+            ...errors,
+            location: "Only numbers are not allowed.",
+          };
+        }
+
+        if (!isNaN(tourTypeInput.value)) {
+          errors = {
+            ...errors,
+            tourType: "Only numbers are not allowed.",
+          };
+        }
+
+        if (!isNaN(languageInput.value)) {
+          errors = {
+            ...errors,
+            language: "Only numbers are not allowed.",
+          };
+        }
+
+        if (destinationInput.value.length === 0) {
+          errors = {
+            ...errors,
+            destination: "Destination is required!",
+          };
+        }
+
+        if (locationInput.value.length === 0) {
+          errors = {
+            ...errors,
+            location: "Location is required!",
+          };
+        }
+
+        if (tourTypeInput.value.length === 0) {
+          errors = {
+            ...errors,
+            tourType: "Tour Type is required!",
+          };
+        }
+
+        if (minPriceInput.value.length === 0) {
+          errors = {
+            ...errors,
+            minPrice: "Min Price is required!",
+          };
+        }
+
+        if (maxPriceInput.value.length === 0) {
+          errors = {
+            ...errors,
+            maxPrice: "Max Price is required!",
+          };
+        }
+
+        if (languageInput.value.length === 0) {
+          errors = {
+            ...errors,
+            language: "Language is required!",
+          };
+        }
+
+        if (errors.destination ||
+          errors.language ||
+          errors.location ||
+          errors.maxPrice ||
+          errors.minPrice ||
+          errors.tourType
+        ) {
+          throw errors;
+        } else {
+          window.location.href = "search.html";
+          document.getElementById("form").reset();
+
+          destinationErrorMessage.textContent = "";
+          locationErrorMessage.textContent = "";
+          tourTypeErrorMessage.textContent = "";
+          minPriceErrorMessage.textContent = "";
+          maxPriceErrorMessage.textContent = "";
+          languageErrorMessage.textContent = "";
+        }
+      } catch (errors) {
+        const errorMessages = [...document.getElementsByClassName("errors")];
+        const errorNames = ["destination", "location", "tourType", "minPrice", "maxPrice", "language"];
+        let i = 0;
+        while (i < Object.keys(errors).length) {
+          errorMessages[i].innerHTML = errors[errorNames[i]]
+          i++;
+        }
+      }
+    });
   </script>
 </body>
 
