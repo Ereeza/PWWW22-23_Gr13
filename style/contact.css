@@ -8,26 +8,22 @@ body {
   font-family: "Libre Baskerville", serif;
 }
 
-.contactContainer {
-  width: 100%;
-}
-
-.contactContainer_row_row {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.contact-container {
+  padding: 2rem 0;
   background-image: linear-gradient(rgb(13, 13, 13) 0%,
-  rgba(13, 13, 13, 0.6) 100%),
-  url("../assets/images/contact.jpeg");
+      rgba(13, 13, 13, 0.6) 100%),
+    url("../assets/images/contact.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-width: 210vh;
-  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 500px;
 }
 
-.contact-need {
+.contact_text {
   color: #fff;
   padding: 3rem;
 }
@@ -37,16 +33,10 @@ body {
   background-color: #e7e7e7;
   border-radius: 10px;
   padding: 3.5rem 1.25rem;
-  margin-bottom: 3.5rem;
 }
 
 .contact:hover {
   box-shadow: 0px 3px 8px hsl(0, 0%, 80%);
-}
-
-.contact__title {
-  text-align: center;
-  margin-bottom: 2rem;
 }
 
 .contact__form {
@@ -111,64 +101,61 @@ input[type="submit"]:focus {
   outline: none;
 }
 
-.contact-description_row {
+.address-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 }
 
 .our-address {
+  background-color: #003768;
+  padding: 5rem;
+  width: 50%;
+}
+
+.our-address p {
+  color: white;
+}
+
+.address-description {
+  font-size: 1rem;
+  font-weight: 200;
+  color: #003768;
+  line-height: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.address-description_phone {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-}
-
-.contact-description {
-  padding: 5rem;
-  font-size: 1rem;
-  background-color: #003768;
-  color: #fff;
-}
-
-.contact-description p {
-  font-size: 1rem;
-  text-align: center;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-}
-
-.contact-link {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 7rem;
-  padding-right: 10rem;
-  justify-content: center;
-}
-
-h4 {
-  font-size: 1rem;
-  font-weight: 700;
-  text-align: left;
-  color: #e7e7e7;
-  padding-bottom: 0.5rem;
+  align-items: center;
 }
 
 .number {
-  padding: 1rem;
+  padding: 1rem 0.2rem;
   text-align: left;
   font-size: 0.7rem;
   font-weight: 500;
   color: #fff;
 }
 
-.contact-address {
+.find-location {
+  margin: 1rem 5rem;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.contact-link {
+  padding: 5rem;
+  justify-content: center;
+  width: 50%;
+}
+
+.address-container h4 {
   font-size: 1rem;
-  font-weight: 200;
-  color: #003768;
-  line-height: 1.5rem;
-  padding-bottom: 2rem;
+  font-weight: 700;
+  text-align: left;
+  color: #e7e7e7;
+  padding-bottom: 0.5rem;
 }
 
 mark {
@@ -182,17 +169,58 @@ abbr {
 .map-title {
   color: #003768;
   font-weight: 700;
-  padding-bottom: 2rem;
+  margin: 1.5rem 0 1rem;
 }
 
-.description-col {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+
+
+@media(max-width: 1100px) {
+  .address-container {
+    flex-direction: column;
+  }
+
+  .our-address,
+  .contact-link {
+    width: 100%;
+  }
+
+  .our-address {
+    padding: 7rem;
+  }
+
+  .contact-link {
+    text-align: center;
+  }
+
+  .contact-map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
-.find-location {
-  margin: 1rem 5rem;
-  padding: 1rem;
-  background-color: #fff;
+@media (max-width: 720px) {
+  .contact {
+    max-width: min(100%, 450px);
+  }
+}
+
+@media (max-width: 500px) {
+  .contact {
+    max-width: min(100%, 350px);
+  }
+
+
+  .our-address {
+    padding: 5rem;
+  }
+
+  .address-description_phone {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .find-location {
+    margin: 1rem 0;
+  }
 }
