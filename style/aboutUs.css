@@ -98,17 +98,44 @@ h2 {
 
 .services-container {
     margin: 0 auto;
-    width: 60%;
+    width: 70%;
 }
 
 .services-row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 2rem 1rem;
     color: rgb(19, 48, 48);
     font-size: 1.2rem;
     font-weight: 900;
+}
+
+.line-service {
+    padding: 2rem;
+    text-align: center;
+}
+
+.line-service ul {
+    text-align: left;
+}
+
+.services-row div img {
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.services-row div {
+    border: 5px dashed rgb(43, 118, 179);
+    width: 33%;
+    max-height: 200px;
+}
+
+.services-row div+div {
+    margin-left: 2rem;
+}
+
+.line-service+.line-service {
+    margin-left: 5rem;
 }
 
 .sub-services {
@@ -116,7 +143,7 @@ h2 {
 }
 
 .sub-services li {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     list-style-type: square;
     color: darkslategray;
 }
