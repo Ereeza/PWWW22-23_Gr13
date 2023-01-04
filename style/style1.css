@@ -599,9 +599,26 @@ header {
   line-height: 1.3rem;
 }
 
+.client-name {
+  font-family: var(--font-family-libre);
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-align: center;
+  display: block;
+  padding-bottom: 0.2rem;
+}
 
-.mySlides,
-.mySlides2 {
+.client-address {
+  font-family: var(--font-family-libre);
+  font-weight: bold;
+  color: #4e4e4e;
+  font-size: 0.65rem;
+  text-align: center;
+  display: block;
+  padding-bottom: 0.2rem;
+}
+
+.mySlide {
   display: none;
 }
 
@@ -644,8 +661,7 @@ header {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.dot,
-.dot2 {
+.dot {
   cursor: pointer;
   height: 15px;
   width: 15px;
@@ -659,8 +675,7 @@ header {
 }
 
 .active,
-.dot:hover,
-.dot2:hover {
+.dot:hover:hover {
   background-color: #717171;
 }
 
