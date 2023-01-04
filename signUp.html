@@ -36,6 +36,14 @@
             <span id="nameErrorMessage" class="errors"></span>
           </div>
           <div class="access__inputGroup">
+            <label>Gender:</label>
+            <br>
+            <div class="gender">
+              <label for="female">Female</label><input type="radio" name="gender" value="female" />
+              <label for="male">Male</label><input type="radio" name="gender" value="male"/>
+            </div>
+          </div>
+          <div class="access__inputGroup">
             <label>Email:</label>
             <br />
             <input type="email" placeholder="Email" id="email" />
@@ -46,6 +54,13 @@
             <br />
             <input type="password" placeholder="Password" id="password" />
             <span id="passwordErrorMessage" class="errors"></span>
+          </div>
+          <div class="access__inputGroup">
+            <br />
+            <div class="confirm">
+              <input type="checkbox" />
+              <label id="confirm">I agree to receive communications regarding my Travel Dream account.</label>
+            </div>
           </div>
           <span id="successfulMessage" class="successfulMessage"></span>
           <input type="submit" value="Sign Up" />
