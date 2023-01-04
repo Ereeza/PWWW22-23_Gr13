@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style/bookNow.css" rel="stylesheet" />
+    <title>Cart</title>
+  </head>
+  <body>
+    <main class="cart">
+      <div class="cart__banner">
+        <h1>Check your orders</h1>
+      </div>
+      <table class="booked-package">
+        <caption>
+          Your Booked Package
+        </caption>
+        <tbody>
+          <!-- <script src="js/bookNow.js" type="text/JavaScript"></script> -->
+          <tr class="total">
+            <td colspan="3">Booked Package</td>
+            <td class="result">
+              <script>
+                document.write(localStorage.getItem("packageIndex"));
+                //   document.write(packageIndex);
+              </script>
+            </td>
+          </tr>
+          <tr class="total">
+            <td colspan="3">Number of Persons</td>
+            <td class="result">
+              <script>
+                document.write(localStorage.getItem("numOfPersons"));
+                //   document.write(numOfPersons);
+              </script>
+            </td>
+          </tr>
+          <tr class="total">
+            <td colspan="3">With or Without Food</td>
+            <td class="result">
+              <script>
+                document.write(localStorage.getItem("withFood"));
+                //   outputWithFood(withFood);
+              </script>
+            </td>
+          </tr>
+          <tr class="total" id="all-total">
+            <td colspan="3">Total</td>
+            <td class="result">
+              <script>
+                document.write(localStorage.getItem("total"));
+                //   outputCurrency(total);
+              </script>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
