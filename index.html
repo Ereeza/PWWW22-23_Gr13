@@ -345,14 +345,26 @@
             <a href="bookNow.html" class="book-now_btn">Book Now</a>
             <a class="read-more_btn" id="readMoreBtn">Read More</a>
           </div>
-          <!-- <div id="readMore">
-              <div class="read-more_bar">
-                <h4>Read More - Thailand</h4>
-                <span class="read-more_close" id="readMoreClose">X</span>
-              </div>
-              <hr />
-              <div class="read-more_content"></div>
-            </div> -->
+          <div id="readMore">
+            <div class="read-more_bar">
+              <h4>Read More - Thailand</h4>
+              <span class="read-more_close" id="readMoreClose">X</span>
+            </div>
+            <hr />
+            <div class="read-more_content">
+              <p>This special offer includes a trip to our most popular and most visited place - Thailand. There is a
+                40% sale due to December holidays. It includes 5 star accomodation for 2 persons. Also, transport and
+                food are covered by our company for 5 days and 5 nights </p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni est, recusandae aperiam ex officiis
+                eligendi, vitae illum impedit quaerat iusto illo accusantium, quidem rem sequi perferendis voluptatem
+                voluptates assumenda ipsam quia praesentium maiores! Labore dolore saepe quis. Soluta inventore at
+                atque, id dolor quisquam ipsa similique hic sequi. Laboriosam, accusantium.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni est, recusandae aperiam ex officiis
+                eligendi, vitae illum impedit quaerat iusto illo accusantium, quidem rem sequi perferendis voluptatem
+                voluptates assumenda ipsam quia praesentium maiores! Labore dolore saepe quis. Soluta inventore at
+                atque, id dolor quisquam ipsa similique hic sequi. Laboriosam, accusantium.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -516,6 +528,27 @@
       </div>
     </div>
   </footer>
+  <script>
+    const readMoreContainer = document.getElementById("readMore");
+    const readMoreBtn = document.getElementById("readMoreBtn");
+    const readMoreClose = document.getElementById("readMoreClose");
+
+    readMoreBtn.onclick = function () {
+      readMoreContainer.style.display = "block";
+    };
+
+    readMoreBtn.addEventListener("click", () => {
+      readMoreContainer.style.display = "block";
+    });
+
+    readMoreClose.addEventListener("click", () => {
+      readMoreContainer.style.display = "none";
+    });
+
+    readMoreClose.onclick = function () {
+      readMoreContainer.style.display = "none";
+    };
+  </script>
   <!-- <script>
       const scriptURL =
         "https://script.google.com/macros/s/AKfycbzWwevbSIjV5nhs0y3Dul2PMQSy2hdhDWJ_1J1NTLttMA4qBKw0dIZSrFMPjvfjlpHnFg/exec";

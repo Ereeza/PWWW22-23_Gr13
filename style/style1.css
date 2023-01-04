@@ -708,25 +708,36 @@ header {
   gap: 1.5rem;
 }
 
-/* #readMore {
+#readMore {
   left: 50%;
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: #e5e5e5;
+  background-color: var(--color-darkblue);
   box-shadow: 0px 12px 26px rbga(0, 0, 0, 0.1);
-  color: black;
+  color: white;
+  font-size: 1rem;
   border-radius: 7px;
   display: none;
-  width: 50%;
-  height: 50%;
+  width: 75%;
+  height: 60%;
   overflow-y: scroll;
+}
+
+.read-more_content {
+  padding: 2.5rem;
+  font-size: .9rem;
+}
+
+.read-more_content p+p {
+  margin-top: 1rem;
 }
 
 .read-more_bar {
   display: flex;
   justify-content: space-between;
-  padding: 0.5rem;
+  padding: 1rem 1.5rem;
+  text-transform: uppercase;
 }
 
 .read-more_close {
@@ -736,7 +747,7 @@ header {
 .read-more hr {
   width: 95%;
   margin: 0 auto;
-} */
+}
 
 .newsletter {
   background-color: var(--color-darkblue);
