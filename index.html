@@ -447,7 +447,7 @@
               Please subscribe us.
             </p>
             <form class="subcription" name="submit-to-google-sheet">
-              <input type="email" name="Email" placeholder="Enter Your Email Here" required />
+              <input type="email" name="Email" placeholder="Enter Your Email Here" id = "subscribeInput"required />
               <button type="submit">Subscribe</button>
             </form>
             <br />
@@ -549,24 +549,36 @@
       readMoreContainer.style.display = "none";
     };
   </script>
-  <!-- <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbzWwevbSIjV5nhs0y3Dul2PMQSy2hdhDWJ_1J1NTLttMA4qBKw0dIZSrFMPjvfjlpHnFg/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      const message = document.getElementById("message");
+  <script>
+    //subscribe
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbzWwevbSIjV5nhs0y3Dul2PMQSy2hdhDWJ_1J1NTLttMA4qBKw0dIZSrFMPjvfjlpHnFg/exec";
+    const form = document.forms["submit-to-google-sheet"];
+    const message = document.getElementById("message");
+    const subscribeInput = document.getElementById("subscribeInput");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (subscribeInput.value === sessionStorage.getItem("subscribe")) {
+        message.textContent = "You cannot subscribe with the same email twice!";
+        setTimeout(function () {
+          message.textContent = "";
+        }, 3500);
+        return;
+      }
+      fetch(scriptURL, { method: "POST", body: new FormData(form) }) 
+        .then((response) => {
+          message.innerHTML = "Thank You For Subscribing!";
+          setTimeout(function () {
+            message.innerHTML = "";
+          }, 2000);
+          sessionStorage.setItem("subscribe", subscribeInput.value)
+          form.reset();
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            message.innerHTML = "Thank You For Subscribing!";
-            setTimeout(function () {
-              message.innerHTML = "";
-            }, 2000);
-            form.reset();
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
+        })
+        .catch((error) => console.error("Error!", error.message));
+    })
+  </script>
+  <!-- <script>
 
       const countDownClock = (number = 100, format = "seconds") => {
         const d = document;
