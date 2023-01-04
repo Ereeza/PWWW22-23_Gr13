@@ -37,7 +37,7 @@ body {
     text-align: center;
 }
 
-h1 {
+h2 {
     font-family: 'Caramel';
     font-size: 3rem;
     font-weight: 700;
@@ -78,8 +78,20 @@ h1 {
     padding: .35rem;
 }
 
+.client-review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#testimonalVideo {
+    width: 70%;
+    margin: 0 auto;
+    object-fit: fill;
+    max-height: 500px;
+}
+
 .our-services {
-    background-color: #eee;
     padding: 2rem 0;
 }
 
