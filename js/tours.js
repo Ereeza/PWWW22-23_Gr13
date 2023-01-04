@@ -2,12 +2,9 @@ window.addEventListener("DOMContentLoaded", showTime());
 
 function showTime() {
     let date = new Date();
-
     let h = date.getHours();
     let m = date.getMinutes();
     let s = date.getSeconds();
-
-    console.log(h);
 
     let session = "AM";
 
@@ -40,18 +37,17 @@ function showTime() {
     const user = document.getElementById("User");
     let clock = document.getElementById("clock");
 
-    if (h < 8 && session === "AM") {
+    if (h < 3 && session === "AM") {
+        clock.style.background = "url('assets/images/paris-night.jpg') center/cover no-repeat";
+        user.innerHTML = "Good Night!";
+    }
+    else if (h > 3 && session === "AM") {
+
         clock.style.background = "url('assets/images/paris-day.jpg') center/cover no-repeat";
         user.innerHTML = "Good Morning!";
     }
-    else if (h < 11 && session === "AM") {
-
-        clock.style.background = "url('assets/images/paris-day.jpg') center/cover no-repeat";
-        user.innerHTML = "Good Day!";
-    }
-    else if (h < 8 && session === "PM") {
-        clock.style.background = "url('assets/images/paris-night.jpg') center/cover no-repeat";
-
+    else if (h < 6 && session === "PM") {
+        clock.style.background = "url('assets/images/paris-afternoon.jpeg') center/cover no-repeat";
         user.innerHTML = "Good Afternoon!";
     }
     else {
