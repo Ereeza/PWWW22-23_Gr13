@@ -494,8 +494,15 @@ header {
   margin-left: 1rem;
 }
 
-.quote {
+.cards img {
+  width: 93px;
+  max-height: 93px;
+}
+
+.cards .quote {
   padding: 1rem 0;
+  width: 20px;
+  max-height: 50px;
 }
 
 .cards p {
@@ -508,45 +515,79 @@ header {
   line-height: 1.3rem;
 }
 
-.client-details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+.mySlides,
+.mySlides2 {
+  display: none;
 }
 
-.client-name {
-  font-family: var(--font-family-inter);
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
   font-weight: bold;
-  font-size: 0.9rem;
-  color: var(--color-text-grey);
-  padding: 1rem 0;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: #dedede;
+  opacity: 0.7;
 }
 
-.client-address {
-  font-family: var(--font-family-libre);
-  font-weight: normal;
-  font-size: 0.7rem;
-  color: var(--color-text-grey);
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
-.testimonal-buttons {
-  display: flex;
-  justify-content: center;
-  margin: 1.25rem;
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
-.testimonal-buttons label {
-  height: 0.9rem;
-  width: 0.9rem;
-  background: #ACACAC;
-  margin: 0 0.255rem;
+.dot,
+.dot2 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
   border-radius: 50%;
-  transition: all 0.5s ease;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
-.testimonal-buttons label.active {
-  background: var(--color-lighterblue);
+.active,
+.dot:hover,
+.dot2:hover {
+  background-color: #717171;
 }
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 
 .section-col_content .date {
   padding-top: 1rem;
