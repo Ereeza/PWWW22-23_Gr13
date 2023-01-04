@@ -447,7 +447,7 @@
           </div>
           <div class="offer-buttons">
             <a href="bookNow.html" class="book-now_btn">Book Now</a>
-            <a class="read-more_btn" id="readMoreBtn">Read More</a>
+            <a class="read-more_btn readMoreBtn" id="readMoreBtn">Read More</a>
           </div>
           <div id="readMore">
             <div class="read-more_bar">
@@ -501,7 +501,7 @@
                 </p>
               </div>
               <div class="blog-button row">
-                <a href="#" class="read-more">Read more</a>
+                <a href="#" class="read-more readMoreBtn">Read more</a>
               </div>
             </div>
           </div>
@@ -517,7 +517,7 @@
                 </p>
               </div>
               <div class="blog-button row">
-                <a href="#" class="read-more">Read more</a>
+                <a href="#" class="read-more readMoreBtn">Read more</a>
               </div>
             </div>
           </div>
@@ -533,7 +533,7 @@
                 </p>
               </div>
               <div class="blog-button row">
-                <a href="#" class="read-more">Read more</a>
+                <a href="#" class="read-more readMoreBtn">Read more</a>
               </div>
             </div>
           </div>
@@ -641,12 +641,15 @@
   <script src="js/slider.js"></script>
   <script>
     const readMoreContainer = document.getElementById("readMore");
-    const readMoreBtn = document.getElementById("readMoreBtn");
+    // const readMoreBtn = document.getElementById("readMoreBtn");
+    const readMoreButtons = [...document.getElementsByClassName("readMoreBtn")]
     const readMoreClose = document.getElementById("readMoreClose");
 
-    readMoreBtn.onclick = function () {
-      readMoreContainer.style.display = "block";
-    };
+    readMoreButtons.map((item) => {
+      item.addEventListener("click", () => {
+        readMoreContainer.style.display = "block";
+      });
+    })
 
     readMoreBtn.addEventListener("click", () => {
       readMoreContainer.style.display = "block";
@@ -655,10 +658,6 @@
     readMoreClose.addEventListener("click", () => {
       readMoreContainer.style.display = "none";
     });
-
-    readMoreClose.onclick = function () {
-      readMoreContainer.style.display = "none";
-    };
   </script>
   <script>
     const scriptURL =

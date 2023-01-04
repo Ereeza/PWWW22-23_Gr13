@@ -739,6 +739,7 @@ header {
   font-weight: bold;
   font-size: 0.7rem;
   color: var(--color-lighterblue);
+  z-index: 9999;
 }
 
 .special-offer {
