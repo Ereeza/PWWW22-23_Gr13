@@ -178,7 +178,7 @@
     <section class="discount">
       <div class="container">
         <h2>
-          <span class="discount_bold">Get upto 50% discount</span> <br />
+          <span class="discount_bold" id="discount_bold">Get upto 50% discount</span> <br />
           by joining us within 11 march
         </h2>
         <div class="countdown-container">
@@ -888,6 +888,39 @@
         }
       }
     });
+  </script>
+
+  <script>
+    const discount_bold = document.getElementById("discount_bold");
+
+    let day;
+    switch (new Date().getDay()) {
+      case 0:
+        day = "Sunday";
+        break;
+      case 1:
+        day = "Monday";
+        break;
+      case 2:
+        day = "Tuesday";
+        break;
+      case 3:
+        day = "Wednesday";
+        break;
+      case 4:
+        day = "Thursday";
+        break;
+      case 5:
+        day = "Friday";
+        break;
+      case 6:
+        day = "Saturday";
+    }
+
+    if (day === "Sunday" || day === "Saturday") {
+      discount_bold.textContent = "Get upto 70% discount";
+    }
+
   </script>
 </body>
 
